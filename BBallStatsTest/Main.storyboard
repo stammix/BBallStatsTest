@@ -1,0 +1,1524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bVl-uw-c16">
+    <device id="retina4_0" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--In Game Settings View Controller-->
+        <scene sceneID="c60-NP-Efa">
+            <objects>
+                <viewController id="bVl-uw-c16" customClass="InGameSettingsViewController" customModule="BBallStatsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ehg-mw-VeC"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Nj-BN-MJm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Jw-jl-fZn">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collecting Stats for one Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC3-oJ-aLL">
+                                <rect key="frame" x="41" y="39" width="225" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="both Teams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2I-6Q-VAS">
+                                <rect key="frame" x="364" y="38.5" width="90" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcv-vd-XGQ">
+                                <rect key="frame" x="37" y="147.5" width="104.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkB-St-Khg">
+                                <rect key="frame" x="231.5" y="147.5" width="91.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opponent Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQ2-Hy-FWD">
+                                <rect key="frame" x="392.5" y="147.5" width="122.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jzY-6a-7Pj">
+                                <rect key="frame" x="290" y="33" width="51" height="31"/>
+                                <color key="onTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="collectBothSwitch:" destination="bVl-uw-c16" eventType="valueChanged" id="icf-h5-ZEh"/>
+                                </connections>
+                            </switch>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YlJ-dZ-zBH">
+                                <rect key="frame" x="194" y="180" width="110" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iSz-jf-M91">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpH-YN-lBe">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="HomeTeamBlack:" destination="bVl-uw-c16" eventType="touchUpInside" id="Xbw-44-75v"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7N-Cp-jui">
+                                                <rect key="frame" x="40" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="HomeTeamBlue:" destination="bVl-uw-c16" eventType="touchUpInside" id="FpX-Zy-W7d"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSb-fx-hvD">
+                                                <rect key="frame" x="80" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="HomeTeamRed:" destination="bVl-uw-c16" eventType="touchUpInside" id="fr9-L1-sh5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NfO-Xw-ldo">
+                                        <rect key="frame" x="0.0" y="40" width="110" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksd-FI-mSn">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="HomeTeamWhite:" destination="bVl-uw-c16" eventType="touchUpInside" id="wso-pn-jf6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="657-Al-sa0">
+                                                <rect key="frame" x="40" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="HomeTeamYellow:" destination="bVl-uw-c16" eventType="touchUpInside" id="giP-pz-0ZQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7h-Bf-rpl">
+                                                <rect key="frame" x="80" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="HomeTeamGreen:" destination="bVl-uw-c16" eventType="touchUpInside" id="VII-6y-Ck6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N45-sG-RAo">
+                                <rect key="frame" x="509" y="270" width="44" height="30"/>
+                                <state key="normal" title="TipOff"/>
+                                <connections>
+                                    <action selector="tippOffButton:" destination="bVl-uw-c16" eventType="touchUpInside" id="7Qk-Pn-vvb"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Yl5-cZ-Yec">
+                                <rect key="frame" x="399" y="180" width="110" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pIL-v2-TFv">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLt-i4-xYL">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="OpponentTeamBlack:" destination="bVl-uw-c16" eventType="touchUpInside" id="V1d-36-ADi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgD-TO-QAh">
+                                                <rect key="frame" x="40" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="OpponentTeamBlue:" destination="bVl-uw-c16" eventType="touchUpInside" id="vuq-Oj-BZJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m80-cx-aOU">
+                                                <rect key="frame" x="80" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="OpponentTeamRed:" destination="bVl-uw-c16" eventType="touchUpInside" id="43L-CX-E4Z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rQS-qf-kU2">
+                                        <rect key="frame" x="0.0" y="40" width="110" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwx-vg-btH">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="OpponentTeamWhite:" destination="bVl-uw-c16" eventType="touchUpInside" id="VlG-N2-aOQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZs-9d-43x">
+                                                <rect key="frame" x="40" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="OpponentTeamYellow:" destination="bVl-uw-c16" eventType="touchUpInside" id="GHd-6o-59W"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFu-sz-QUP">
+                                                <rect key="frame" x="80" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="OpponentTeamGreen:" destination="bVl-uw-c16" eventType="touchUpInside" id="Wor-WQ-yZS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d88-Ro-1Y3">
+                                <rect key="frame" x="20" y="270" width="84" height="30"/>
+                                <state key="normal" title="Reset Game"/>
+                                <connections>
+                                    <action selector="resetGameButton:" destination="bVl-uw-c16" eventType="touchUpInside" id="i1W-Lk-0BM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YlJ-dZ-zBH" firstAttribute="leading" secondItem="2Jw-jl-fZn" secondAttribute="leading" constant="194" id="3b9-a6-2Eh"/>
+                            <constraint firstItem="jzY-6a-7Pj" firstAttribute="top" secondItem="Ehg-mw-VeC" secondAttribute="bottom" constant="33" id="7aw-8j-bCx"/>
+                            <constraint firstItem="d88-Ro-1Y3" firstAttribute="leading" secondItem="2Jw-jl-fZn" secondAttribute="leadingMargin" id="8zo-Jh-kxz"/>
+                            <constraint firstItem="YlJ-dZ-zBH" firstAttribute="top" secondItem="DkB-St-Khg" secondAttribute="bottom" constant="12" id="Ael-ML-Rnt"/>
+                            <constraint firstItem="Yl5-cZ-Yec" firstAttribute="top" secondItem="YlJ-dZ-zBH" secondAttribute="top" id="E0T-5T-4KH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j2I-6Q-VAS" secondAttribute="trailing" constant="94" id="Kd5-vl-G1c"/>
+                            <constraint firstItem="jzY-6a-7Pj" firstAttribute="centerY" secondItem="j2I-6Q-VAS" secondAttribute="centerY" id="Kzh-bw-8UG"/>
+                            <constraint firstItem="jzY-6a-7Pj" firstAttribute="leading" secondItem="HC3-oJ-aLL" secondAttribute="trailing" constant="24" id="Lga-Ut-Vt8"/>
+                            <constraint firstItem="zcv-vd-XGQ" firstAttribute="leading" secondItem="2Jw-jl-fZn" secondAttribute="leadingMargin" constant="17" id="MPu-Vl-G51"/>
+                            <constraint firstAttribute="bottom" secondItem="N45-sG-RAo" secondAttribute="bottom" constant="20" symbolic="YES" id="PKf-zu-3R6"/>
+                            <constraint firstItem="XQ2-Hy-FWD" firstAttribute="centerX" secondItem="Yl5-cZ-Yec" secondAttribute="centerX" id="Rbu-N7-XVO"/>
+                            <constraint firstItem="DkB-St-Khg" firstAttribute="leading" secondItem="zcv-vd-XGQ" secondAttribute="trailing" constant="90" id="XuI-gg-f25"/>
+                            <constraint firstItem="j2I-6Q-VAS" firstAttribute="leading" secondItem="jzY-6a-7Pj" secondAttribute="trailing" constant="25" id="YIo-CI-qPd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N45-sG-RAo" secondAttribute="trailing" constant="-5" id="c2q-1X-3jm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XQ2-Hy-FWD" secondAttribute="trailing" constant="33" id="dhY-Pn-5sb"/>
+                            <constraint firstItem="d88-Ro-1Y3" firstAttribute="baseline" secondItem="N45-sG-RAo" secondAttribute="baseline" id="hlA-Bm-CHC"/>
+                            <constraint firstItem="DkB-St-Khg" firstAttribute="baseline" secondItem="XQ2-Hy-FWD" secondAttribute="baseline" id="igJ-g4-1ZB"/>
+                            <constraint firstItem="0Nj-BN-MJm" firstAttribute="top" secondItem="YlJ-dZ-zBH" secondAttribute="bottom" constant="70" id="q1P-rd-ig7"/>
+                            <constraint firstItem="zcv-vd-XGQ" firstAttribute="baseline" secondItem="DkB-St-Khg" secondAttribute="baseline" id="tiP-fX-pkH"/>
+                            <constraint firstItem="HC3-oJ-aLL" firstAttribute="top" secondItem="Ehg-mw-VeC" secondAttribute="bottom" constant="39" id="uyj-h5-ZkE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="teamSwitch" destination="jzY-6a-7Pj" id="jiA-h4-C9P"/>
+                        <segue destination="GOF-hA-dd3" kind="show" identifier="SettingsToGameSegue" id="5cg-4I-PrN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cb9-Zv-QZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330.58470764617692" y="-495.19999999999999"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J23-87-6XA">
+            <objects>
+                <navigationController id="GOF-hA-dd3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RnN-x5-cbV">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uif-dS-XG6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AYx-mx-Zc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-323" y="334"/>
+        </scene>
+        <!--What happend?-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WhatHappendViewController" customModule="BBallStatsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ak3-dm-YSv">
+                                <rect key="frame" x="372" y="25" width="45" height="45"/>
+                                <color key="backgroundColor" red="0.52316653028770332" green="1" blue="0.96113549806483689" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="lV0-DP-om7"/>
+                                    <constraint firstAttribute="width" constant="45" id="sPy-Gf-gDZ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="skipTwoMinutesPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u6E-eJ-ybc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEA-YB-SQ1">
+                                <rect key="frame" x="209.5" y="25" width="45" height="45"/>
+                                <color key="backgroundColor" red="0.47351127837007156" green="1" blue="0.98919714868404351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="3OS-xj-L3N"/>
+                                    <constraint firstAttribute="height" constant="45" id="x9U-Xm-gXI"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="oneMinuteBackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rOx-Pu-gg9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vt-jl-78e">
+                                <rect key="frame" x="274.5" y="26.5" width="19.5" height="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38x-TC-6SQ">
+                                <rect key="frame" x="317" y="25" width="45" height="45"/>
+                                <color key="backgroundColor" red="0.51905752205101063" green="1" blue="0.94277228128928325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="fUu-t2-FL1"/>
+                                    <constraint firstAttribute="width" constant="45" id="wyv-xh-VUW"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="nextMinutePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TeR-pI-rOS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5O-Rk-CnZ">
+                                <rect key="frame" x="154.5" y="25" width="45" height="45"/>
+                                <color key="backgroundColor" red="0.46440394731142098" green="1" blue="0.98480499558351675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="O06-tJ-gcK"/>
+                                    <constraint firstAttribute="height" constant="45" id="n1g-5X-7zk"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="twoMinutesBackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aBl-fO-fmS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What happend?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9w3-7G-gOE">
+                                <rect key="frame" x="194.5" y="144.5" width="179" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0I-KG-Jey">
+                                <rect key="frame" x="159.5" y="30" width="35" height="35"/>
+                                <color key="backgroundColor" red="1" green="0.77287334896044324" blue="0.60997290487687039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="L0u-rh-7qa"/>
+                                    <constraint firstAttribute="height" constant="35" id="cb2-ua-o3e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTA-ex-T1B">
+                                <rect key="frame" x="322" y="30" width="35" height="35"/>
+                                <color key="backgroundColor" red="1" green="0.73512841896736858" blue="0.62575866255928525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="FN9-QK-G29"/>
+                                    <constraint firstAttribute="width" constant="35" id="lQ4-1W-ZFn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEG-yS-Jja">
+                                <rect key="frame" x="377" y="30" width="35" height="35"/>
+                                <color key="backgroundColor" red="1" green="0.74933915628612446" blue="0.62569554469054622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="S4C-NP-Jfp"/>
+                                    <constraint firstAttribute="width" constant="35" id="gVK-9g-Vym"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7M8-Dj-lzW">
+                                <rect key="frame" x="214.5" y="30" width="35" height="35"/>
+                                <color key="backgroundColor" red="1" green="0.74471333450910293" blue="0.66593060203119103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="LRL-8j-JuK"/>
+                                    <constraint firstAttribute="width" constant="35" id="ead-YB-ijX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GameTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLa-e8-dk4">
+                                <rect key="frame" x="243.5" y="8" width="81.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wha-dS-JMt">
+                                <rect key="frame" x="93.5" y="168" width="58" height="30"/>
+                                <state key="normal" title="2pointer"/>
+                                <connections>
+                                    <action selector="twoPointerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ou-8O-3Gn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNw-9M-wSF">
+                                <rect key="frame" x="211.5" y="168" width="58" height="30"/>
+                                <state key="normal" title="3pointer"/>
+                                <connections>
+                                    <action selector="threePointsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJH-pw-kgc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHW-Na-Qu8">
+                                <rect key="frame" x="328.5" y="168" width="55" height="30"/>
+                                <state key="normal" title="FTmade"/>
+                                <connections>
+                                    <action selector="FTmadePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ayf-3d-KSx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgj-xp-Qyj">
+                                <rect key="frame" x="425.5" y="168" width="66" height="30"/>
+                                <state key="normal" title="FTmissed"/>
+                                <connections>
+                                    <action selector="FTmissedPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="78L-it-Rps"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5H-dm-4PC">
+                                <rect key="frame" x="107.5" y="238" width="30" height="30"/>
+                                <state key="normal" title="Foul"/>
+                                <connections>
+                                    <action selector="FoulPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xZB-TS-b0t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3I-Fs-jFZ">
+                                <rect key="frame" x="225.5" y="238" width="30" height="30"/>
+                                <state key="normal" title="TO"/>
+                                <connections>
+                                    <action selector="TOPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IzK-jj-I2F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fJ-M6-5UU">
+                                <rect key="frame" x="341.5" y="238" width="35" height="30"/>
+                                <state key="normal" title="Steal"/>
+                                <connections>
+                                    <action selector="StealPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="720-JO-uox"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWs-IQ-F8k">
+                                <rect key="frame" x="429.5" y="238" width="59" height="30"/>
+                                <state key="normal" title="TimeOut"/>
+                                <connections>
+                                    <action selector="TimeOutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xnb-dz-wgE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkf-cg-tQJ">
+                                <rect key="frame" x="475" y="10" width="44.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPa-8A-3tX">
+                                <rect key="frame" x="434" y="36" width="50" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="iES-eg-Mtn"/>
+                                    <constraint firstAttribute="width" constant="50" id="oJ3-mH-yZQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jm-vY-Q43">
+                                <rect key="frame" x="506" y="36" width="50" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="QFj-aJ-27v"/>
+                                    <constraint firstAttribute="height" constant="20" id="Wck-Nq-2c5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQc-Pa-fKv">
+                                <rect key="frame" x="492" y="32.5" width="10" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KkM-mt-FAf">
+                                <rect key="frame" x="30" y="10" width="85.5" height="86"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="before:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPu-YX-o40">
+                                        <rect key="frame" x="24" y="0.0" width="37.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st Minute" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pt-5m-AsO">
+                                        <rect key="frame" x="3.5" y="21.5" width="78.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IAw-3N-kC0">
+                                        <rect key="frame" x="0.0" y="43" width="85.5" height="21.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2p" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnC-OD-y2D">
+                                                <rect key="frame" x="0.0" y="0.0" width="28.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YiG-Si-Hp0">
+                                                <rect key="frame" x="28.5" y="0.0" width="28.5" height="21.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bU-D6-5si">
+                                                        <rect key="frame" x="5" y="0.0" width="19" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bra-v6-8rQ">
+                                                <rect key="frame" x="57" y="0.0" width="28.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.21487645923261744" blue="0.21825695898022679" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="edit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uei-kL-GIh">
+                                        <rect key="frame" x="33.5" y="64.5" width="18.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sc-dH-WR7">
+                                <rect key="frame" x="238" y="102" width="92" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="e55-4V-tNh"/>
+                                    <constraint firstAttribute="width" constant="92" id="uXb-CW-8S0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.67486379009999997" blue="0.1190480696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KkM-mt-FAf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="2lB-6q-XkR"/>
+                            <constraint firstItem="o3I-Fs-jFZ" firstAttribute="centerY" secondItem="W5H-dm-4PC" secondAttribute="centerY" id="4K1-Dt-Gx6"/>
+                            <constraint firstItem="7M8-Dj-lzW" firstAttribute="leading" secondItem="w0I-KG-Jey" secondAttribute="trailing" constant="20" id="6FD-ki-sKX"/>
+                            <constraint firstItem="aPa-8A-3tX" firstAttribute="centerY" secondItem="cQc-Pa-fKv" secondAttribute="centerY" id="6rp-UZ-GNB"/>
+                            <constraint firstItem="5vt-jl-78e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8H4-I4-rW6"/>
+                            <constraint firstItem="cQc-Pa-fKv" firstAttribute="centerX" secondItem="fkf-cg-tQJ" secondAttribute="centerX" id="91y-jP-wRG"/>
+                            <constraint firstItem="7M8-Dj-lzW" firstAttribute="centerY" secondItem="5vt-jl-78e" secondAttribute="centerY" id="9O6-8H-t1L"/>
+                            <constraint firstItem="wNw-9M-wSF" firstAttribute="leading" secondItem="Wha-dS-JMt" secondAttribute="trailing" constant="60" id="AzL-0E-ugQ"/>
+                            <constraint firstItem="38x-TC-6SQ" firstAttribute="centerY" secondItem="XTA-ex-T1B" secondAttribute="centerY" id="Bwd-mR-gl3"/>
+                            <constraint firstItem="YWs-IQ-F8k" firstAttribute="leading" secondItem="8fJ-M6-5UU" secondAttribute="trailing" constant="53" id="EMI-bl-PrO"/>
+                            <constraint firstItem="XTA-ex-T1B" firstAttribute="leading" secondItem="5vt-jl-78e" secondAttribute="trailing" constant="28" id="Em2-KN-HMw"/>
+                            <constraint firstItem="wNw-9M-wSF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-43.5" id="GdV-Vp-WHP"/>
+                            <constraint firstItem="z5O-Rk-CnZ" firstAttribute="centerX" secondItem="w0I-KG-Jey" secondAttribute="centerX" id="HLJ-P8-zCs"/>
+                            <constraint firstItem="w0I-KG-Jey" firstAttribute="centerY" secondItem="7M8-Dj-lzW" secondAttribute="centerY" id="IMj-Ro-Kzg"/>
+                            <constraint firstItem="MEG-yS-Jja" firstAttribute="leading" secondItem="XTA-ex-T1B" secondAttribute="trailing" constant="20" id="KEd-37-NeN"/>
+                            <constraint firstItem="9Jm-vY-Q43" firstAttribute="centerY" secondItem="cQc-Pa-fKv" secondAttribute="centerY" id="OME-GF-8yx"/>
+                            <constraint firstItem="sLa-e8-dk4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="QeC-e6-w0a"/>
+                            <constraint firstItem="5Sc-dH-WR7" firstAttribute="centerX" secondItem="9w3-7G-gOE" secondAttribute="centerX" id="RY8-nM-1JG"/>
+                            <constraint firstItem="MEG-yS-Jja" firstAttribute="centerY" secondItem="XTA-ex-T1B" secondAttribute="centerY" id="T6t-rR-rbY"/>
+                            <constraint firstItem="z5O-Rk-CnZ" firstAttribute="centerY" secondItem="w0I-KG-Jey" secondAttribute="centerY" id="V08-4Q-rwT"/>
+                            <constraint firstItem="9w3-7G-gOE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="V38-BP-z8X"/>
+                            <constraint firstItem="iHW-Na-Qu8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="72" id="W9Q-96-tGk"/>
+                            <constraint firstItem="fkf-cg-tQJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="W9Q-dE-dEL"/>
+                            <constraint firstItem="cQc-Pa-fKv" firstAttribute="leading" secondItem="aPa-8A-3tX" secondAttribute="trailing" constant="8" id="YuI-sf-0oc"/>
+                            <constraint firstItem="38x-TC-6SQ" firstAttribute="centerX" secondItem="XTA-ex-T1B" secondAttribute="centerX" id="bH2-zM-Q2W"/>
+                            <constraint firstItem="8fJ-M6-5UU" firstAttribute="centerY" secondItem="W5H-dm-4PC" secondAttribute="centerY" id="bpW-FE-1hl"/>
+                            <constraint firstItem="ak3-dm-YSv" firstAttribute="centerY" secondItem="MEG-yS-Jja" secondAttribute="centerY" id="c2A-Ca-3Qv"/>
+                            <constraint firstItem="9w3-7G-gOE" firstAttribute="top" secondItem="5Sc-dH-WR7" secondAttribute="bottom" constant="21.5" id="dSm-Sd-Edq"/>
+                            <constraint firstItem="o3I-Fs-jFZ" firstAttribute="leading" secondItem="W5H-dm-4PC" secondAttribute="trailing" constant="88" id="dzN-tc-e2i"/>
+                            <constraint firstItem="mgj-xp-Qyj" firstAttribute="centerY" secondItem="iHW-Na-Qu8" secondAttribute="centerY" id="etK-a1-7To"/>
+                            <constraint firstItem="mgj-xp-Qyj" firstAttribute="leading" secondItem="iHW-Na-Qu8" secondAttribute="trailing" constant="42" id="gLp-KN-EGg"/>
+                            <constraint firstItem="W5H-dm-4PC" firstAttribute="top" secondItem="Wha-dS-JMt" secondAttribute="bottom" constant="40" id="gVH-g8-TVZ"/>
+                            <constraint firstItem="nEA-YB-SQ1" firstAttribute="centerX" secondItem="7M8-Dj-lzW" secondAttribute="centerX" id="gVd-QT-bgw"/>
+                            <constraint firstItem="ak3-dm-YSv" firstAttribute="centerX" secondItem="MEG-yS-Jja" secondAttribute="centerX" id="h4F-yb-akN"/>
+                            <constraint firstItem="nEA-YB-SQ1" firstAttribute="centerY" secondItem="7M8-Dj-lzW" secondAttribute="centerY" id="hJN-ic-Nfi"/>
+                            <constraint firstItem="iHW-Na-Qu8" firstAttribute="centerY" secondItem="wNw-9M-wSF" secondAttribute="centerY" id="ilK-QD-pG4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W5H-dm-4PC" secondAttribute="bottom" constant="20" id="lWm-S2-U3Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Jm-vY-Q43" secondAttribute="trailing" constant="-8" id="mYK-oH-2fs"/>
+                            <constraint firstItem="XTA-ex-T1B" firstAttribute="centerY" secondItem="5vt-jl-78e" secondAttribute="centerY" id="nSZ-Ys-VbL"/>
+                            <constraint firstItem="KkM-mt-FAf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="nri-Kl-m7C"/>
+                            <constraint firstItem="o3I-Fs-jFZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-43.5" id="or4-j1-sxo"/>
+                            <constraint firstItem="YWs-IQ-F8k" firstAttribute="centerY" secondItem="W5H-dm-4PC" secondAttribute="centerY" id="qE2-kC-5c6"/>
+                            <constraint firstItem="sLa-e8-dk4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="stN-Cs-ik5"/>
+                            <constraint firstItem="9Jm-vY-Q43" firstAttribute="leading" secondItem="cQc-Pa-fKv" secondAttribute="trailing" constant="4" id="u3R-qn-ksk"/>
+                            <constraint firstItem="8fJ-M6-5UU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="75" id="wSw-gu-4Hy"/>
+                            <constraint firstItem="cQc-Pa-fKv" firstAttribute="top" secondItem="fkf-cg-tQJ" secondAttribute="bottom" constant="2" id="xMA-SJ-UbF"/>
+                            <constraint firstItem="5vt-jl-78e" firstAttribute="leading" secondItem="7M8-Dj-lzW" secondAttribute="trailing" constant="25" id="xjN-cj-AbO"/>
+                            <constraint firstItem="wNw-9M-wSF" firstAttribute="centerY" secondItem="Wha-dS-JMt" secondAttribute="centerY" id="yEP-9m-xem"/>
+                            <constraint firstItem="9w3-7G-gOE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yK2-BF-t57"/>
+                            <constraint firstItem="5vt-jl-78e" firstAttribute="top" secondItem="sLa-e8-dk4" secondAttribute="bottom" constant="-2" id="zbo-AN-4ab"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="What happend?" id="kgx-06-eSV">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="gIz-9b-rog">
+                            <connections>
+                                <action selector="backToSettingsButton:" destination="BYZ-38-t0r" id="9HW-yj-r5y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="CurrentMinuteLabel" destination="5vt-jl-78e" id="Ef5-mD-WGl"/>
+                        <outlet property="currentScoreTeamOneLabel" destination="aPa-8A-3tX" id="nqL-1M-65B"/>
+                        <outlet property="currentScoreTeamTwoLabel" destination="9Jm-vY-Q43" id="FAL-xu-TK8"/>
+                        <outlet property="lastMinuteLabel" destination="7M8-Dj-lzW" id="9hz-tG-lk6"/>
+                        <outlet property="lastStatActionLabel" destination="lnC-OD-y2D" id="JTX-D8-3x6"/>
+                        <outlet property="lastStatMinuteLabel" destination="0Pt-5m-AsO" id="fGQ-vQ-Kyy"/>
+                        <outlet property="lastStatPlayerLabel" destination="Bra-v6-8rQ" id="tam-GO-bhx"/>
+                        <outlet property="nextMinuteLabel" destination="XTA-ex-T1B" id="ltN-nt-DPO"/>
+                        <outlet property="periodLabel" destination="5Sc-dH-WR7" id="Vfm-6f-qoc"/>
+                        <outlet property="plusTwoMinutesLabel" destination="MEG-yS-Jja" id="e8k-3r-ed7"/>
+                        <outlet property="twoMinutesBackLabel" destination="w0I-KG-Jey" id="VhM-2J-xqS"/>
+                        <segue destination="mpX-o0-Jlg" kind="show" identifier="whatHappendToWhoMadeItSegue" id="8zL-XD-sr2"/>
+                        <segue destination="VIb-Wt-BZ0" kind="show" identifier="whatHappendToWhoMadeBothTeamsSegue" id="P89-Kt-20Q"/>
+                        <segue destination="bVl-uw-c16" kind="presentation" identifier="toInGameSettingsSegue" id="Qxu-aM-CDM"/>
+                        <segue destination="dPT-E9-Rxe" kind="show" identifier="breakSegue" id="2jL-Le-HeC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340.47976011994007" y="373.60000000000002"/>
+        </scene>
+        <!--Break View Controller-->
+        <scene sceneID="lcE-vH-4kJ">
+            <objects>
+                <viewController id="dPT-E9-Rxe" customClass="BreakViewController" customModule="BBallStatsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jdd-ER-ipd"/>
+                        <viewControllerLayoutGuide type="bottom" id="uQp-pe-xxq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gas-01-YXy">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RDv-dH-LYy">
+                                <rect key="frame" x="117" y="60" width="338" height="260"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quarter Break" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sft-10-jEK">
+                                <rect key="frame" x="209" y="19" width="154" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="YfV-Q3-aTe"/>
+                                    <constraint firstAttribute="height" constant="26" id="tnF-u4-AmA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVi-WR-7td">
+                                <rect key="frame" x="482" y="20" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="nextQuarterButton:" destination="dPT-E9-Rxe" eventType="touchUpInside" id="35X-JS-2Kr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zusammenfassung Viertel 1" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEL-ib-62H">
+                                <rect key="frame" x="8" y="60" width="162" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="Aya-HU-a5s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uQp-pe-xxq" firstAttribute="top" secondItem="fEL-ib-62H" secondAttribute="bottom" constant="193" id="B0e-K3-Yym"/>
+                            <constraint firstItem="JVi-WR-7td" firstAttribute="top" secondItem="jdd-ER-ipd" secondAttribute="bottom" constant="20" id="KNd-BS-bna"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JVi-WR-7td" secondAttribute="trailing" constant="20" id="MUv-n0-Udi"/>
+                            <constraint firstItem="fEL-ib-62H" firstAttribute="top" secondItem="RDv-dH-LYy" secondAttribute="top" id="QkW-cZ-qNE"/>
+                            <constraint firstItem="Sft-10-jEK" firstAttribute="centerX" secondItem="gas-01-YXy" secondAttribute="centerX" constant="2" id="SDa-pS-5cL"/>
+                            <constraint firstItem="RDv-dH-LYy" firstAttribute="leading" secondItem="gas-01-YXy" secondAttribute="leadingMargin" constant="97" id="WCk-JT-ary"/>
+                            <constraint firstAttribute="bottom" secondItem="RDv-dH-LYy" secondAttribute="bottom" id="mpA-4a-X3V"/>
+                            <constraint firstItem="fEL-ib-62H" firstAttribute="leading" secondItem="gas-01-YXy" secondAttribute="leadingMargin" constant="-12" id="nq0-8T-guR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RDv-dH-LYy" secondAttribute="trailing" constant="93" id="o7t-oM-9vY"/>
+                            <constraint firstItem="RDv-dH-LYy" firstAttribute="top" secondItem="jdd-ER-ipd" secondAttribute="bottom" constant="60" id="obt-Z7-TC4"/>
+                            <constraint firstItem="Sft-10-jEK" firstAttribute="top" secondItem="jdd-ER-ipd" secondAttribute="bottom" constant="19" id="qlc-eS-yDj"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dQW-jR-sOY"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="QuarterBreakTitleLabel" destination="Sft-10-jEK" id="uhF-px-amo"/>
+                        <outlet property="nextQuarterButtonLabel" destination="JVi-WR-7td" id="4qE-3Q-3zC"/>
+                        <outlet property="statSummaryTableView" destination="RDv-dH-LYy" id="MlV-2B-CY5"/>
+                        <outlet property="summaryLabel" destination="fEL-ib-62H" id="XbJ-v6-NRE"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="breakToGameSegue" id="gwz-x2-LZT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbH-uw-N6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339.58020989505252" y="1252"/>
+        </scene>
+        <!--Who made it?-->
+        <scene sceneID="Pgv-tS-bx2">
+            <objects>
+                <viewController id="mpX-o0-Jlg" customClass="WhoMadeItViewController" customModule="BBallStatsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Op-Xv-ih5"/>
+                        <viewControllerLayoutGuide type="bottom" id="WsF-eF-qyt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JSO-Lb-udJ">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Nxe-dz-ABC">
+                                <rect key="frame" x="156.5" y="38" width="255" height="245"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HrK-CY-O9a">
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="125"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Q8x-xp-xLq">
+                                                <rect key="frame" x="52.5" y="0.0" width="150" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3o-8Y-27l">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="60"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="45" id="0Lo-6r-Evd"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="T1P1" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="T1P1Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Hj6-b7-jpq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC4-rw-j42">
+                                                        <rect key="frame" x="105" y="0.0" width="45" height="60"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="T1P2" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="T1P2Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="eVW-Lt-cXI"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="tag-z7-sha"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="8tx-Ga-ltq">
+                                                <rect key="frame" x="0.0" y="65" width="255" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXS-gm-hZZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="60"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="ak7-aK-vhZ"/>
+                                                            <constraint firstAttribute="width" constant="45" id="vLg-7X-6Kd"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="T1P3" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="T1P3Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="462-ct-ZBh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5w-sX-Ybn">
+                                                        <rect key="frame" x="105" y="0.0" width="45" height="60"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="KYx-hS-79J"/>
+                                                            <constraint firstAttribute="width" constant="45" id="lKr-sA-hOa"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="T1P4" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="T1P4Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="cSe-D6-10X"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlS-Ti-g5l">
+                                                        <rect key="frame" x="210" y="0.0" width="45" height="60"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="45" id="Uyy-2F-nFE"/>
+                                                            <constraint firstAttribute="height" constant="60" id="hhj-pq-J9d"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="T1P5" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <state key="highlighted" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="T1P5Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Svl-P7-Y44"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FWN-RT-bWY">
+                                        <rect key="frame" x="27.5" y="150" width="200" height="95"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Htf-le-Mhy">
+                                                <rect key="frame" x="17.5" y="0.0" width="165" height="45"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rq0-di-enr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="45"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="G7H-TR-mmZ"/>
+                                                            <constraint firstAttribute="height" constant="45" id="tj3-Ct-Rkz"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <state key="normal" title="T1P6" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="T1P6Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="vYQ-g8-cb2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xt-3W-L4c">
+                                                        <rect key="frame" x="65" y="0.0" width="35" height="45"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="5AT-9N-YCQ"/>
+                                                            <constraint firstAttribute="width" constant="35" id="xHT-jx-m9i"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <state key="normal" title="T1P7" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="T1P7Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="7Mp-hy-V2D"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXq-Jp-ogz">
+                                                        <rect key="frame" x="130" y="0.0" width="35" height="45"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="ubT-wf-iJy"/>
+                                                            <constraint firstAttribute="height" constant="45" id="uie-4s-8lT"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <state key="normal" title="T1P8" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="T1P8Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="g7l-H2-273"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Vv7-oe-ysl">
+                                                <rect key="frame" x="0.0" y="50" width="200" height="45"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGv-wb-CTM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="45"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="0Lb-KF-Vc5"/>
+                                                            <constraint firstAttribute="width" constant="35" id="4nl-SX-pOc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="T1P9" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="T1P9Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="a10-DW-SxQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIr-sF-cpB">
+                                                        <rect key="frame" x="55" y="0.0" width="35" height="45"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="SEp-br-hl0"/>
+                                                            <constraint firstAttribute="width" constant="35" id="mlA-LI-lQe"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="T1P10" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="T1P10Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="oZe-2k-4CT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkO-RB-Rx2">
+                                                        <rect key="frame" x="110" y="0.0" width="35" height="45"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="71y-uy-B2Q"/>
+                                                            <constraint firstAttribute="height" constant="45" id="tps-Ms-yJK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="T1P11" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="T1P11Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="gJe-la-QeX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yG-zE-GGy">
+                                                        <rect key="frame" x="165" y="0.0" width="35" height="45"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="aYz-nv-PT4"/>
+                                                            <constraint firstAttribute="width" constant="35" id="vI3-Mb-Hks"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="T1P12" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="T1P12Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="LvJ-Oe-1xm"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who made it?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qA-kq-Us4">
+                                <rect key="frame" x="207" y="5" width="154.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRh-fc-nhN">
+                                <rect key="frame" x="20" y="1" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="save:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Pxi-nG-fuN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3qA-kq-Us4" firstAttribute="top" secondItem="7Op-Xv-ih5" secondAttribute="bottom" constant="5" id="2vK-Bq-Ixt"/>
+                            <constraint firstItem="WsF-eF-qyt" firstAttribute="top" secondItem="Nxe-dz-ABC" secondAttribute="bottom" constant="5" id="ANS-gZ-wfh"/>
+                            <constraint firstItem="Nxe-dz-ABC" firstAttribute="centerX" secondItem="JSO-Lb-udJ" secondAttribute="centerX" id="AlC-8w-ri0"/>
+                            <constraint firstItem="YRh-fc-nhN" firstAttribute="leading" secondItem="JSO-Lb-udJ" secondAttribute="leadingMargin" id="Eef-nq-Jo4"/>
+                            <constraint firstItem="Nxe-dz-ABC" firstAttribute="top" secondItem="3qA-kq-Us4" secondAttribute="bottom" constant="10" id="MVL-Eg-ZXv"/>
+                            <constraint firstItem="3qA-kq-Us4" firstAttribute="centerX" secondItem="JSO-Lb-udJ" secondAttribute="centerX" id="Uck-Vo-LQR"/>
+                            <constraint firstItem="Nxe-dz-ABC" firstAttribute="centerX" secondItem="JSO-Lb-udJ" secondAttribute="centerX" id="tUQ-gt-mul"/>
+                            <constraint firstItem="YRh-fc-nhN" firstAttribute="baseline" secondItem="3qA-kq-Us4" secondAttribute="baseline" id="yna-Zy-djk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Who made it?" id="6Jd-U2-4AY"/>
+                    <connections>
+                        <outlet property="jersey10Button" destination="mIr-sF-cpB" id="CMC-Eb-BxF"/>
+                        <outlet property="jersey11Button" destination="IkO-RB-Rx2" id="cM4-vc-DTd"/>
+                        <outlet property="jersey12Button" destination="9yG-zE-GGy" id="uEa-aR-wLQ"/>
+                        <outlet property="jersey1Button" destination="f3o-8Y-27l" id="K3T-6i-HMw"/>
+                        <outlet property="jersey2Button" destination="hC4-rw-j42" id="NHO-SB-W8R"/>
+                        <outlet property="jersey3Button" destination="SXS-gm-hZZ" id="scW-hv-yV4"/>
+                        <outlet property="jersey4Button" destination="D5w-sX-Ybn" id="8T3-9Y-2iR"/>
+                        <outlet property="jersey5Button" destination="SlS-Ti-g5l" id="qDT-VR-lgM"/>
+                        <outlet property="jersey6Button" destination="rq0-di-enr" id="GLI-jN-PUV"/>
+                        <outlet property="jersey7Button" destination="1Xt-3W-L4c" id="zSz-4p-ziR"/>
+                        <outlet property="jersey8Button" destination="NXq-Jp-ogz" id="JVz-O2-y2L"/>
+                        <outlet property="jersey9Button" destination="aGv-wb-CTM" id="JFK-X2-16d"/>
+                        <segue destination="CrG-TL-V9f" kind="show" identifier="WhoMadeItToSubstituionT1Segue" id="aPV-kE-8ZV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cHK-kz-9JK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1181" y="44"/>
+        </scene>
+        <!--Substitution View Controller-->
+        <scene sceneID="b8j-pK-KFB">
+            <objects>
+                <viewController id="CrG-TL-V9f" customClass="SubstitutionViewController" customModule="BBallStatsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IVR-en-DNw"/>
+                        <viewControllerLayoutGuide type="bottom" id="AGV-Sb-gDC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g9l-Eq-jSb">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7D3-WB-vAt">
+                                <rect key="frame" x="157" y="95" width="255" height="130"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="zok-qw-AOY">
+                                        <rect key="frame" x="52.5" y="0.0" width="150" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOu-xX-7Zc">
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="60"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="5jc-N5-zua"/>
+                                                    <constraint firstAttribute="height" constant="60" id="v80-PP-gmZ"/>
+                                                </constraints>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="T1P1" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                <connections>
+                                                    <action selector="SubForP1:" destination="CrG-TL-V9f" eventType="touchUpInside" id="Ng3-ac-bUh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pue-4b-gNS">
+                                                <rect key="frame" x="105" y="0.0" width="45" height="60"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Fhq-c0-eta"/>
+                                                    <constraint firstAttribute="width" constant="45" id="SFe-hv-xUA"/>
+                                                </constraints>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="T1P2" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                <connections>
+                                                    <action selector="SubForP2:" destination="CrG-TL-V9f" eventType="touchUpInside" id="E99-vK-h86"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yq9-Z5-TZZ">
+                                        <rect key="frame" x="0.0" y="70" width="255" height="60"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Nsp-Xh-99A">
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwx-kK-H7c">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="60"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="dd0-XR-AO4"/>
+                                                            <constraint firstAttribute="width" constant="45" id="iP5-ue-cj4"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="T1P3" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="SubForP3:" destination="CrG-TL-V9f" eventType="touchUpInside" id="JPb-pr-CJy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITg-10-Kc6">
+                                                        <rect key="frame" x="105" y="0.0" width="45" height="60"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="45" id="3wI-Do-7iu"/>
+                                                            <constraint firstAttribute="height" constant="60" id="bdO-dr-jXU"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="T1P4" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="SubForP4:" destination="CrG-TL-V9f" eventType="touchUpInside" id="S6x-VI-1jN"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsH-4G-eLY">
+                                                        <rect key="frame" x="210" y="0.0" width="45" height="60"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="70d-9z-1sd"/>
+                                                            <constraint firstAttribute="width" constant="45" id="tg2-f7-P2h"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="T1P5" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                        <connections>
+                                                            <action selector="SubForP5:" destination="CrG-TL-V9f" eventType="touchUpInside" id="FYA-rh-g6o"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who's gone out?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaq-fH-8kd">
+                                <rect key="frame" x="190" y="10" width="189" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qaq-fH-8kd" firstAttribute="centerX" secondItem="g9l-Eq-jSb" secondAttribute="centerX" id="CaR-Va-eIV"/>
+                            <constraint firstItem="7D3-WB-vAt" firstAttribute="centerY" secondItem="g9l-Eq-jSb" secondAttribute="centerY" id="kJo-QN-DpH"/>
+                            <constraint firstItem="qaq-fH-8kd" firstAttribute="top" secondItem="IVR-en-DNw" secondAttribute="bottom" constant="10" id="t5e-Px-7ts"/>
+                            <constraint firstItem="7D3-WB-vAt" firstAttribute="centerX" secondItem="g9l-Eq-jSb" secondAttribute="centerX" id="uBr-GU-YPc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SubButton1" destination="pOu-xX-7Zc" id="uI6-lM-Qiy"/>
+                        <outlet property="SubButton2" destination="Pue-4b-gNS" id="Inp-TW-93Z"/>
+                        <outlet property="SubButton3" destination="Uwx-kK-H7c" id="yvi-IZ-CmV"/>
+                        <outlet property="SubButton4" destination="ITg-10-Kc6" id="rsT-Wy-bpy"/>
+                        <outlet property="SubButton5" destination="GsH-4G-eLY" id="93r-KB-y4v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AE7-9L-imJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1927" y="44"/>
+        </scene>
+        <!--Who Made It Both Teams View Controller-->
+        <scene sceneID="Kfm-XQ-15v">
+            <objects>
+                <viewController id="VIb-Wt-BZ0" customClass="WhoMadeItBothTeamsViewController" customModule="BBallStatsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zGx-6m-bSh"/>
+                        <viewControllerLayoutGuide type="bottom" id="MUo-RA-9ed"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CZt-KD-DD7">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who made it?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYr-y8-2fq">
+                                <rect key="frame" x="207" y="5" width="154.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="89m-XH-3Hj">
+                                <rect key="frame" x="3.5" y="56.5" width="560" height="245"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="l3l-8r-3nB">
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="245"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ebO-Tm-mUC">
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="125"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="xPa-XA-0Er">
+                                                        <rect key="frame" x="52.5" y="0.0" width="150" height="60"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72u-Zf-CQw">
+                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="60"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="45" id="bIg-lm-QPE"/>
+                                                                </constraints>
+                                                                <state key="normal" title="T1P1" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P1Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="GIf-cM-Rdn"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHo-5g-dhV">
+                                                                <rect key="frame" x="105" y="0.0" width="45" height="60"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="NYt-pR-iC5"/>
+                                                                    <constraint firstAttribute="height" constant="60" id="X9y-3n-O1P"/>
+                                                                    <constraint firstAttribute="width" constant="45" id="twd-mU-C9k"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <state key="normal" title="T1P2" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P2Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="HsA-UA-bAS"/>
+                                                                    <action selector="T1P2Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="xsV-pB-hGd"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="HPs-IA-PIK">
+                                                        <rect key="frame" x="0.0" y="65" width="255" height="60"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oz6-EI-DUy">
+                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="60"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="Fzn-B7-4AX"/>
+                                                                    <constraint firstAttribute="width" constant="45" id="X3s-RD-etg"/>
+                                                                </constraints>
+                                                                <state key="normal" title="T1P3" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P3Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="nX4-H6-G3O"/>
+                                                                    <action selector="T1P3Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="qho-jo-f0d"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7I-dj-tul">
+                                                                <rect key="frame" x="105" y="0.0" width="45" height="60"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="afd-EO-l7H"/>
+                                                                    <constraint firstAttribute="width" constant="45" id="fpg-nE-T8j"/>
+                                                                </constraints>
+                                                                <state key="normal" title="T1P4" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P4Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="ANb-N5-Y0T"/>
+                                                                    <action selector="T1P4Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="BpD-i8-YXa"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJ8-rH-hOD">
+                                                                <rect key="frame" x="210" y="0.0" width="45" height="60"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="45" id="65m-vt-FSv"/>
+                                                                    <constraint firstAttribute="height" constant="60" id="rXa-0i-TBB"/>
+                                                                </constraints>
+                                                                <state key="normal" title="T1P5" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P5Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="6zp-mO-ZuF"/>
+                                                                    <action selector="T1P5Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="IwM-TR-79X"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="D8k-eo-Fhw">
+                                                <rect key="frame" x="27.5" y="150" width="200" height="95"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="l1t-nL-Vmv">
+                                                        <rect key="frame" x="17.5" y="0.0" width="165" height="45"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYa-KQ-pEX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="45"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="iM7-9W-ui0"/>
+                                                                    <constraint firstAttribute="width" constant="35" id="nc9-Kj-3bM"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <state key="normal" title="T1P6" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P6Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="dgH-ao-us2"/>
+                                                                    <action selector="T1P6Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="kRF-kp-s6m"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPZ-8q-9w2">
+                                                                <rect key="frame" x="65" y="0.0" width="35" height="45"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="CWh-z7-Nc4"/>
+                                                                    <constraint firstAttribute="width" constant="35" id="oGE-JK-8sH"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <state key="normal" title="T1P7" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P7Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="aXd-Zr-zsF"/>
+                                                                    <action selector="T1P7Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="qFP-Hq-nyL"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luB-pN-oQx">
+                                                                <rect key="frame" x="130" y="0.0" width="35" height="45"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="35" id="K91-PK-K9T"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="awn-w5-uEA"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <state key="normal" title="T1P8" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P8Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="sc8-3O-jX1"/>
+                                                                    <action selector="T1P8Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="wKp-6R-43J"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hc7-3O-Ubj">
+                                                        <rect key="frame" x="0.0" y="50" width="200" height="45"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMh-xR-2NV">
+                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="45"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="ZPp-gR-VJR"/>
+                                                                    <constraint firstAttribute="width" constant="35" id="cxj-ee-wtP"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <state key="normal" title="T1P9" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P9Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="JTe-na-8pz"/>
+                                                                    <action selector="T1P9Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Rpx-C0-JEY"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQM-1e-cH7">
+                                                                <rect key="frame" x="55" y="0.0" width="35" height="45"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="HP2-El-bWJ"/>
+                                                                    <constraint firstAttribute="width" constant="35" id="hRU-LU-aXW"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <state key="normal" title="T1P10" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P10Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="18W-EZ-xH8"/>
+                                                                    <action selector="T1P10Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="qqZ-mV-HuQ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rd-Ne-Jhh">
+                                                                <rect key="frame" x="110" y="0.0" width="35" height="45"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="35" id="O57-Kh-CGd"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="gHe-Zo-st4"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <state key="normal" title="T1P11" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P11Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="0C5-tJ-4M3"/>
+                                                                    <action selector="T1P11Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="5rz-4A-irx"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxp-zf-5k5">
+                                                                <rect key="frame" x="165" y="0.0" width="35" height="45"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="RKg-5N-tnT"/>
+                                                                    <constraint firstAttribute="width" constant="35" id="mU9-V4-Ykq"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <state key="normal" title="T1P12" backgroundImage="BballStatsJerseyWhite.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P12Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="OQQ-lf-dTp"/>
+                                                                    <action selector="T1P12Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="r5O-i7-QNM"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="pbQ-bn-78P">
+                                        <rect key="frame" x="305" y="0.0" width="255" height="245"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FTz-ah-3Xn">
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="125"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="1o5-1C-opg">
+                                                        <rect key="frame" x="49.5" y="0.0" width="156" height="60"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGD-TZ-JyA">
+                                                                <rect key="frame" x="0.0" y="0.0" width="48" height="60"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="48" id="HIu-8L-sQ1"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="wKu-h4-zmh"/>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="yxQ-wB-kuB"/>
+                                                                    <constraint firstAttribute="height" constant="60" id="zsZ-rz-V5n"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <state key="normal" title="T2P1" backgroundImage="BballStatsJerseyBlack.png"/>
+                                                                <connections>
+                                                                    <action selector="T2P1Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="ZPb-Bt-nsz"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iw2-TB-5PX">
+                                                                <rect key="frame" x="108" y="0.0" width="48" height="60"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="48" id="RDl-J3-q7Z"/>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="a1e-9d-hWV"/>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="aCe-TJ-71K"/>
+                                                                    <constraint firstAttribute="height" constant="60" id="xFa-To-zCQ"/>
+                                                                </constraints>
+                                                                <state key="normal" title="T2P2" backgroundImage="BballStatsJerseyBlack.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P2Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Osh-u4-WyO"/>
+                                                                    <action selector="T2P2Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="7V8-6c-lk2"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="yWb-Q1-nkR">
+                                                        <rect key="frame" x="0.0" y="65" width="255" height="60"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0b-bp-4uu">
+                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="60"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="5oH-GV-LKa"/>
+                                                                    <constraint firstAttribute="width" constant="45" id="xY7-ab-rZS"/>
+                                                                </constraints>
+                                                                <state key="normal" title="T2P3" backgroundImage="BballStatsJerseyBlack.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P3Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="yAX-KQ-y1m"/>
+                                                                    <action selector="T2P3Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="Wrc-sN-A4b"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKs-WU-5bb">
+                                                                <rect key="frame" x="105" y="0.0" width="45" height="60"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="FTc-f0-eY1"/>
+                                                                    <constraint firstAttribute="width" constant="45" id="JhE-NC-6v7"/>
+                                                                </constraints>
+                                                                <state key="normal" title="T2P4" backgroundImage="BballStatsJerseyBlack.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P4Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="HZ2-2x-omC"/>
+                                                                    <action selector="T2P4Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="eUa-VS-sF1"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5N-DA-bly">
+                                                                <rect key="frame" x="210" y="0.0" width="45" height="60"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="Xzd-KP-A8Y"/>
+                                                                    <constraint firstAttribute="width" constant="45" id="fxB-YZ-ku5"/>
+                                                                </constraints>
+                                                                <state key="normal" title="T2P5" backgroundImage="BballStatsJerseyBlack.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P5Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="bUI-cr-eq7"/>
+                                                                    <action selector="T2P5Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="bd8-bs-ohP"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ay2-ju-5P4">
+                                                <rect key="frame" x="27.5" y="150" width="200" height="95"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="oh5-dh-4rT">
+                                                        <rect key="frame" x="17.5" y="0.0" width="165" height="45"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knT-rG-wIR">
+                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="45"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.70999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="1Fo-rc-dHb"/>
+                                                                    <constraint firstAttribute="width" constant="35" id="AAj-2G-ZFP"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <state key="normal" title="T2P6" backgroundImage="BballStatsJerseyBlack.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P6Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="eae-Ni-vKl"/>
+                                                                    <action selector="T2P6Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="2pl-q1-D0B"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2s-GO-qGD">
+                                                                <rect key="frame" x="65" y="0.0" width="35" height="45"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.70999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="35" id="uqh-Ui-tQ5"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="yle-Sz-D8C"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <state key="normal" title="T2P7" backgroundImage="BballStatsJerseyBlack.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P7Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="H2c-ec-oAG"/>
+                                                                    <action selector="T2P7Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="PXa-ee-t0L"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZo-Ck-Gmh">
+                                                                <rect key="frame" x="130" y="0.0" width="35" height="45"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.70999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="1Ge-xe-jb4"/>
+                                                                    <constraint firstAttribute="width" constant="35" id="X9X-tX-EQ8"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <state key="normal" title="T2P8" backgroundImage="BballStatsJerseyBlack.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P8Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="Sqn-eH-pRo"/>
+                                                                    <action selector="T2P8Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="fFa-rr-up6"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="w1M-xs-O7D">
+                                                        <rect key="frame" x="0.0" y="50" width="200" height="45"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go6-6e-Z9e">
+                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="45"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.70999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="35" id="9mr-oU-W0U"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="wyK-PC-SZE"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <state key="normal" title="T2P9" backgroundImage="BballStatsJerseyBlack.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P9Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="sNa-bZ-wL9"/>
+                                                                    <action selector="T2P9Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="Od8-Nq-B6z"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNi-Ja-6jU">
+                                                                <rect key="frame" x="55" y="0.0" width="35" height="45"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.70999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="35" id="dSt-FJ-ySf"/>
+                                                                    <constraint firstAttribute="height" constant="45" id="fmd-bO-5g3"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <state key="normal" title="T2P10" backgroundImage="BballStatsJerseyBlack.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P10Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="jr7-30-xhR"/>
+                                                                    <action selector="T2P10Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="QCh-m0-l8S"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmI-se-zRb">
+                                                                <rect key="frame" x="110" y="0.0" width="35" height="45"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.70999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="KnH-Ga-vAx"/>
+                                                                    <constraint firstAttribute="width" constant="35" id="T4g-Gx-xCw"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <state key="normal" title="T2P11" backgroundImage="BballStatsJerseyBlack.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P11Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="KQD-5J-AdA"/>
+                                                                    <action selector="T2P11Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="aDB-79-OEI"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFn-1S-bfd">
+                                                                <rect key="frame" x="165" y="0.0" width="35" height="45"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.70999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="NNs-FW-SXU"/>
+                                                                    <constraint firstAttribute="width" constant="35" id="m8S-x4-UCj"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                <state key="normal" title="T2P12" backgroundImage="BballStatsJerseyBlack.png"/>
+                                                                <connections>
+                                                                    <action selector="T1P12Pressed:" destination="mpX-o0-Jlg" eventType="touchUpInside" id="BdR-gJ-Jpj"/>
+                                                                    <action selector="T2P12Pressed:" destination="VIb-Wt-BZ0" eventType="touchUpInside" id="I7e-zZ-o9F"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="89m-XH-3Hj" firstAttribute="top" secondItem="QYr-y8-2fq" secondAttribute="bottom" constant="20" id="Hhr-au-Tng"/>
+                            <constraint firstItem="QYr-y8-2fq" firstAttribute="top" secondItem="zGx-6m-bSh" secondAttribute="bottom" constant="5" id="fdN-fY-Ylb"/>
+                            <constraint firstItem="89m-XH-3Hj" firstAttribute="centerX" secondItem="QYr-y8-2fq" secondAttribute="centerX" id="fki-mN-6XE"/>
+                            <constraint firstItem="QYr-y8-2fq" firstAttribute="centerX" secondItem="CZt-KD-DD7" secondAttribute="centerX" id="rIW-fn-VMl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="T1Jersey10Button" destination="vQM-1e-cH7" id="cAa-Wi-Qq3"/>
+                        <outlet property="T1Jersey11Button" destination="3rd-Ne-Jhh" id="BGE-Pm-N3c"/>
+                        <outlet property="T1Jersey12Button" destination="Zxp-zf-5k5" id="P9z-No-XjQ"/>
+                        <outlet property="T1Jersey1Button" destination="72u-Zf-CQw" id="hyI-Id-jaP"/>
+                        <outlet property="T1Jersey2Button" destination="MHo-5g-dhV" id="r1R-Yb-dAy"/>
+                        <outlet property="T1Jersey3Button" destination="Oz6-EI-DUy" id="huX-1E-fd6"/>
+                        <outlet property="T1Jersey4Button" destination="D7I-dj-tul" id="otq-EO-Vkl"/>
+                        <outlet property="T1Jersey5Button" destination="FJ8-rH-hOD" id="F5Q-78-FRU"/>
+                        <outlet property="T1Jersey6Button" destination="HYa-KQ-pEX" id="QaY-mf-Qrc"/>
+                        <outlet property="T1Jersey7Button" destination="PPZ-8q-9w2" id="Hl4-Xt-eDU"/>
+                        <outlet property="T1Jersey8Button" destination="luB-pN-oQx" id="RxV-v5-WxP"/>
+                        <outlet property="T1Jersey9Button" destination="BMh-xR-2NV" id="m4E-qo-M82"/>
+                        <outlet property="T2Jersey10Button" destination="gNi-Ja-6jU" id="cus-4S-a8U"/>
+                        <outlet property="T2Jersey11Button" destination="QmI-se-zRb" id="Ilo-x0-iTz"/>
+                        <outlet property="T2Jersey12Button" destination="uFn-1S-bfd" id="fme-q4-n8P"/>
+                        <outlet property="T2Jersey1Button" destination="FGD-TZ-JyA" id="15K-sx-9Wt"/>
+                        <outlet property="T2Jersey2Button" destination="iw2-TB-5PX" id="j1e-NZ-kiv"/>
+                        <outlet property="T2Jersey3Button" destination="U0b-bp-4uu" id="ujP-9M-rI6"/>
+                        <outlet property="T2Jersey4Button" destination="AKs-WU-5bb" id="8hC-Ks-GRG"/>
+                        <outlet property="T2Jersey5Button" destination="v5N-DA-bly" id="Ix7-Hd-CkK"/>
+                        <outlet property="T2Jersey6Button" destination="knT-rG-wIR" id="k7J-W7-Dd2"/>
+                        <outlet property="T2Jersey7Button" destination="U2s-GO-qGD" id="VF4-Ed-Ucf"/>
+                        <outlet property="T2Jersey8Button" destination="sZo-Ck-Gmh" id="ynm-Ql-0Zu"/>
+                        <outlet property="T2Jersey9Button" destination="go6-6e-Z9e" id="rT8-g8-OVb"/>
+                        <segue destination="CrG-TL-V9f" kind="show" identifier="BothTeamsToSubstitutionSegue" id="ZcD-N2-Yvd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Riy-7q-RXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1181" y="793"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BballStatsJerseyBlack.png" width="420" height="660"/>
+        <image name="BballStatsJerseyWhite.png" width="419" height="666"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZcD-N2-Yvd"/>
+        <segue reference="gwz-x2-LZT"/>
+    </inferredMetricsTieBreakers>
+</document>

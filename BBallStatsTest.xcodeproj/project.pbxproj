@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		86C6204B2062AFBB00F4CCCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6204A2062AFBB00F4CCCF /* AppDelegate.swift */; };
-		86C6204D2062AFBB00F4CCCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6204C2062AFBB00F4CCCF /* ViewController.swift */; };
-		86C620502062AFBB00F4CCCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C6204E2062AFBB00F4CCCF /* Main.storyboard */; };
 		86C620532062AFBB00F4CCCF /* BBallStatsTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86C620512062AFBB00F4CCCF /* BBallStatsTest.xcdatamodeld */; };
 		86C620552062AFBB00F4CCCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86C620542062AFBB00F4CCCF /* Assets.xcassets */; };
 		86C620582062AFBB00F4CCCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C620562062AFBB00F4CCCF /* LaunchScreen.storyboard */; };
 		86C620632062AFBB00F4CCCF /* BBallStatsTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C620622062AFBB00F4CCCF /* BBallStatsTestTests.swift */; };
 		86C6206E2062AFBB00F4CCCF /* BBallStatsTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6206D2062AFBB00F4CCCF /* BBallStatsTestUITests.swift */; };
+		86C620842062AFE400F4CCCF /* BballStatsJerseyWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C6207B2062AFE200F4CCCF /* BballStatsJerseyWhite.png */; };
+		86C620852062AFE400F4CCCF /* SubstitutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6207C2062AFE200F4CCCF /* SubstitutionViewController.swift */; };
+		86C620862062AFE400F4CCCF /* BballStatsJerseyBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C6207D2062AFE300F4CCCF /* BballStatsJerseyBlack.png */; };
+		86C620872062AFE400F4CCCF /* WhoMadeItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6207E2062AFE300F4CCCF /* WhoMadeItViewController.swift */; };
+		86C620882062AFE400F4CCCF /* BreakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6207F2062AFE300F4CCCF /* BreakViewController.swift */; };
+		86C620892062AFE400F4CCCF /* InGameSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C620802062AFE300F4CCCF /* InGameSettingsViewController.swift */; };
+		86C6208A2062AFE400F4CCCF /* WhatHappendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C620812062AFE300F4CCCF /* WhatHappendViewController.swift */; };
+		86C6208B2062AFE400F4CCCF /* WhoMadeItBothTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C620822062AFE300F4CCCF /* WhoMadeItBothTeamsViewController.swift */; };
+		86C6208C2062AFE400F4CCCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C620832062AFE400F4CCCF /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +44,6 @@
 /* Begin PBXFileReference section */
 		86C620472062AFBB00F4CCCF /* BBallStatsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBallStatsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C6204A2062AFBB00F4CCCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		86C6204C2062AFBB00F4CCCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		86C6204F2062AFBB00F4CCCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86C620522062AFBB00F4CCCF /* BBallStatsTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BBallStatsTest.xcdatamodel; sourceTree = "<group>"; };
 		86C620542062AFBB00F4CCCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86C620572062AFBB00F4CCCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,15 @@
 		86C620692062AFBB00F4CCCF /* BBallStatsTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBallStatsTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C6206D2062AFBB00F4CCCF /* BBallStatsTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBallStatsTestUITests.swift; sourceTree = "<group>"; };
 		86C6206F2062AFBB00F4CCCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86C6207B2062AFE200F4CCCF /* BballStatsJerseyWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BballStatsJerseyWhite.png; sourceTree = "<group>"; };
+		86C6207C2062AFE200F4CCCF /* SubstitutionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstitutionViewController.swift; sourceTree = "<group>"; };
+		86C6207D2062AFE300F4CCCF /* BballStatsJerseyBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BballStatsJerseyBlack.png; sourceTree = "<group>"; };
+		86C6207E2062AFE300F4CCCF /* WhoMadeItViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoMadeItViewController.swift; sourceTree = "<group>"; };
+		86C6207F2062AFE300F4CCCF /* BreakViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakViewController.swift; sourceTree = "<group>"; };
+		86C620802062AFE300F4CCCF /* InGameSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InGameSettingsViewController.swift; sourceTree = "<group>"; };
+		86C620812062AFE300F4CCCF /* WhatHappendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatHappendViewController.swift; sourceTree = "<group>"; };
+		86C620822062AFE300F4CCCF /* WhoMadeItBothTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoMadeItBothTeamsViewController.swift; sourceTree = "<group>"; };
+		86C620832062AFE400F4CCCF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +114,15 @@
 			isa = PBXGroup;
 			children = (
 				86C6204A2062AFBB00F4CCCF /* AppDelegate.swift */,
-				86C6204C2062AFBB00F4CCCF /* ViewController.swift */,
-				86C6204E2062AFBB00F4CCCF /* Main.storyboard */,
+				86C620802062AFE300F4CCCF /* InGameSettingsViewController.swift */,
+				86C620812062AFE300F4CCCF /* WhatHappendViewController.swift */,
+				86C6207E2062AFE300F4CCCF /* WhoMadeItViewController.swift */,
+				86C620822062AFE300F4CCCF /* WhoMadeItBothTeamsViewController.swift */,
+				86C6207C2062AFE200F4CCCF /* SubstitutionViewController.swift */,
+				86C6207F2062AFE300F4CCCF /* BreakViewController.swift */,
+				86C620832062AFE400F4CCCF /* Main.storyboard */,
+				86C6207B2062AFE200F4CCCF /* BballStatsJerseyWhite.png */,
+				86C6207D2062AFE300F4CCCF /* BballStatsJerseyBlack.png */,
 				86C620542062AFBB00F4CCCF /* Assets.xcassets */,
 				86C620562062AFBB00F4CCCF /* LaunchScreen.storyboard */,
 				86C620592062AFBB00F4CCCF /* Info.plist */,
@@ -237,7 +258,9 @@
 			files = (
 				86C620582062AFBB00F4CCCF /* LaunchScreen.storyboard in Resources */,
 				86C620552062AFBB00F4CCCF /* Assets.xcassets in Resources */,
-				86C620502062AFBB00F4CCCF /* Main.storyboard in Resources */,
+				86C6208C2062AFE400F4CCCF /* Main.storyboard in Resources */,
+				86C620842062AFE400F4CCCF /* BballStatsJerseyWhite.png in Resources */,
+				86C620862062AFE400F4CCCF /* BballStatsJerseyBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +285,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86C6204D2062AFBB00F4CCCF /* ViewController.swift in Sources */,
+				86C620872062AFE400F4CCCF /* WhoMadeItViewController.swift in Sources */,
+				86C620882062AFE400F4CCCF /* BreakViewController.swift in Sources */,
+				86C620892062AFE400F4CCCF /* InGameSettingsViewController.swift in Sources */,
 				86C6204B2062AFBB00F4CCCF /* AppDelegate.swift in Sources */,
+				86C6208A2062AFE400F4CCCF /* WhatHappendViewController.swift in Sources */,
+				86C620852062AFE400F4CCCF /* SubstitutionViewController.swift in Sources */,
 				86C620532062AFBB00F4CCCF /* BBallStatsTest.xcdatamodeld in Sources */,
+				86C6208B2062AFE400F4CCCF /* WhoMadeItBothTeamsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +328,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		86C6204E2062AFBB00F4CCCF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				86C6204F2062AFBB00F4CCCF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		86C620562062AFBB00F4CCCF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
