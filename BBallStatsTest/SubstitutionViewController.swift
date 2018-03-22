@@ -229,7 +229,7 @@ class SubstitutionViewController: UIViewController {
         stat.player = Int32(newPlayer)
         stat.action = tappedAction
         stat.points = Int32(pointsOfAction)
-        //  (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
     }
 
 }

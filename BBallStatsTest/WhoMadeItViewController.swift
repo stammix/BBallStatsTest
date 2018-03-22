@@ -215,7 +215,7 @@ class WhoMadeItViewController: UIViewController {
         stat.action = tappedAction
         stat.points = Int32(pointsOfAction)
         stat.actionID = Int32(actionNumber)
-      //  (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

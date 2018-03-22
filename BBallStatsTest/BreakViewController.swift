@@ -28,7 +28,10 @@ class BreakViewController: UIViewController, UITableViewDataSource, UITableViewD
     var collectStatsForBothTeams = Int()
     
     var stats : [Stat] = []
-
+    var statsOfPeriod1 : [Stat] = []
+    var statsOfPeriod2 : [Stat] = []
+    var statsOfPeriod3 : [Stat] = []
+    var statsOfPeriod4 : [Stat] = []
    
     @IBOutlet weak var statSummaryTableView: UITableView!
     
@@ -55,6 +58,10 @@ class BreakViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+      //  statsOfPeriod1 = getStatsOfPeriod1()
+        //statsOfPeriod2 = getStatsOfPeriod2()
+      //  statsOfPeriod3 = getStatsOfPeriod3()
+      //  statsOfPeriod4 = getStatsOfPeriod4()
         
         statSummaryTableView.dataSource = self
         statSummaryTableView.delegate = self
@@ -62,27 +69,6 @@ class BreakViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
         override func viewWillAppear(_ animated: Bool) {
             loadStats()
-            
-            let setPeriodObject = UserDefaults.standard.object(forKey: "period")
-            if let setPeriod = setPeriodObject as? String {
-                if setPeriod == "1" {
-                    Period = 1
-                    actualMinute  = quarterLength + 1
-                    print ("QuarterBreak Period \(Period)")
-                } else if setPeriod == "2" {
-                    Period = 2
-                    actualMinute  = (2 * quarterLength) + 1
-                    print ("QuarterBreak Period \(Period)")
-                } else if setPeriod == "3" {
-                    Period = 3
-                    actualMinute  = (3 * quarterLength) + 1
-                    print ("QuarterBreak Period \(Period)")
-                } else if setPeriod == "4" {
-                    Period = 4
-                    actualMinute  = (4 * quarterLength) + 1
-                    print ("QuarterBreak Period \(Period)")
-                }
-            }
             
         if Period == 1 {
             print("*** Break after Period 1")
@@ -123,19 +109,64 @@ class BreakViewController: UIViewController, UITableViewDataSource, UITableViewD
             print ("tüdülü Error")
         }
     }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return Period
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "PERIOD #\(Period)"
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        // return stats.count
         return stats.count
     }
     
+/*    func getStatsOfPeriod1() -> [Stat] {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = Stat.fetchRequest() as NSFetchRequest<Stat>
+        fetchRequest.predicate = NSPredicate(format: "quarter == @i", 1)
+        do {
+            let stats = try context.fetch(fetchRequest) as [Stat]
+            return stats
+        } catch  {}
+            return []
+    }
+   
+
+    func getStatsOfPeriod2() -> [Stat] {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = Stat.fetchRequest() as NSFetchRequest<Stat>
+        fetchRequest.predicate = NSPredicate(format: "quarter == @i", 2)
+        do {
+            let stats = try context.fetch(fetchRequest) as [Stat]
+            return stats
+        } catch  {}
+        return []
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let stat : Stat
+        if indexPath.section == 0 {
+            stat = statsOfPeriod1[indexPath.row]
+        } else {
+            stat = statsOfPeriod2[indexPath.row]
+        }
         let cell = UITableViewCell()
-        let stat = stats[indexPath.row]
      //   cell.textLabel?.textColor =
         cell.textLabel?.textAlignment = .center
         cell.textLabel?.text = "\(stat.minute). Minute: \(stat.action!) by #\(stat.player) of Team \(stat.chosenTeam)"
 //      let stat = stats[indexPath.row]
 //      cell.textLabel?.text = "\(stat.homeTeam), \(stat.player), \(stat.action), \(stat.points)"
+        return cell
+    }
+ */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let stat = stats[indexPath.row]
+        //   cell.textLabel?.textColor =
+        cell.textLabel?.textAlignment = .center
+        cell.textLabel?.text = "\(stat.minute). Minute: \(stat.action!) by #\(stat.player) of Team \(stat.chosenTeam)"
         return cell
     }
     
