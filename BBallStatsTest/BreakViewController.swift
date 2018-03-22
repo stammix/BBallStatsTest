@@ -26,6 +26,8 @@ class BreakViewController: UIViewController, UITableViewDataSource, UITableViewD
     var homeTeamColor = UIColor()
     var guestTeamColor = UIColor()
     var collectStatsForBothTeams = Int()
+    
+    var stats : [Stat] = []
 
    
     @IBOutlet weak var statSummaryTableView: UITableView!
@@ -53,11 +55,14 @@ class BreakViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    //    statSummaryTableView.dataSource = self
-     //   statSummaryTableView.delegate = self
+        
+        statSummaryTableView.dataSource = self
+        statSummaryTableView.delegate = self
         
     }
         override func viewWillAppear(_ animated: Bool) {
+            loadStats()
+            
             let setPeriodObject = UserDefaults.standard.object(forKey: "period")
             if let setPeriod = setPeriodObject as? String {
                 if setPeriod == "1" {
@@ -109,12 +114,26 @@ class BreakViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
             
 }
+    func loadStats() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do {
+            stats = try context.fetch(Stat.fetchRequest()) as! [Stat]
+            print ("Summary \(stats)")
+        } catch {
+            print ("tüdülü Error")
+        }
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        // return stats.count
-        return 10
+        return stats.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+        let stat = stats[indexPath.row]
+     //   cell.textLabel?.textColor =
+        cell.textLabel?.textAlignment = .center
+        cell.textLabel?.text = "\(stat.minute). Minute: \(stat.action!) by #\(stat.player) of Team \(stat.chosenTeam)"
 //      let stat = stats[indexPath.row]
 //      cell.textLabel?.text = "\(stat.homeTeam), \(stat.player), \(stat.action), \(stat.points)"
         return cell

@@ -214,6 +214,7 @@ class WhoMadeItViewController: UIViewController {
         stat.player = Int32(player)
         stat.action = tappedAction
         stat.points = Int32(pointsOfAction)
+        stat.actionID = Int32(actionNumber)
       //  (UIApplication.shared.delegate as! AppDelegate).saveContext()
     }
     

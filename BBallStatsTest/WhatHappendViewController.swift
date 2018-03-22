@@ -559,7 +559,6 @@ class WhatHappendViewController: UIViewController {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         do {
             stats = try context.fetch(Stat.fetchRequest()) as! [Stat]
-            
             // lastStatActionLabel.text = stats.action
             print (stats)
         } catch {

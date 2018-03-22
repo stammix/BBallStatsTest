@@ -329,6 +329,15 @@ class WhoMadeItBothTeamsViewController: UIViewController {
             T2Jersey12Button.setBackgroundImage(#imageLiteral(resourceName: "BballStatsJerseyWhite.png"), for: .normal)
         }
     }
+            override func viewWillAppear(_ animated: Bool) {
+                if tappedAction == "2pointer" {
+                    pointsOfAction = 2
+                } else if tappedAction == "3pointer" {
+                    pointsOfAction = 3
+                } else if tappedAction == "madeFreeThrow" {
+                    pointsOfAction = 1
+                }
+        }
             override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let subVC = segue.destination as! SubstitutionViewController
             subVC.newPlayer = playerToSwitchIn
@@ -351,6 +360,7 @@ class WhoMadeItBothTeamsViewController: UIViewController {
         stat.player = Int32(player)
         stat.action = tappedAction
         stat.points = Int32(pointsOfAction)
+        stat.actionID = Int32(actionNumber)
         //  (UIApplication.shared.delegate as! AppDelegate).saveContext()
     }
     
