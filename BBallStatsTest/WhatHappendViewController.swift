@@ -180,6 +180,18 @@ class WhatHappendViewController: UIViewController {
         } else {
             periodLabel.text = "Overtime \(Period - 4)"
         }
+//        if chosenTeam == 1 {
+//            if statAction == "2Pointer" {
+//                currentScoreTeamOne = currentScoreTeamOne + 2
+//                currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
+//            } else if statAction == "3Pointer" {
+//                currentScoreTeamOne = currentScoreTeamOne + 3
+//                currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
+//            } else if statAction == "FTmade" {
+//                currentScoreTeamOne = currentScoreTeamOne + 1
+//                currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
+//            }
+//        }
     }
     
     //actions
@@ -281,9 +293,12 @@ class WhatHappendViewController: UIViewController {
     
     override func viewDidLoad() {
         
+        if collectStatsForBothTeams == 2 {
+            segueToWhoMade = "whatHappendToWhoMadeBothTeamsSegue"
+        } else {
+            segueToWhoMade = "whatHappendToWhoMadeItSegue"
+        }
         
-        
-          print("** what homeColorPale \(homeColorPale), guestColorPale \(guestColorPale)")
         GameTime = quarterLength
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -363,90 +378,7 @@ class WhatHappendViewController: UIViewController {
            }
 
     override func viewWillAppear(_ animated: Bool) {
-        lastStat()
         
-   /*     let appDelegate = UIApplication.shared.delegate as! AppDelegate // UIApplication.shared().delegate as! AppDelegate is now UIApplication.shared.delegate as! AppDelegate
-        
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let newStat = NSEntityDescription.insertNewObject(forEntityName: "Stats", into: context)
-
-    
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
-        
-        request.returnsObjectsAsFaults = false
-        
-        do {
-            let results = try context.fetch(request)
-            if results.count > 0 {
-                for result in results as! [NSManagedObject]
-                {
-                    if let player = result.value(forKey: "player") as? String {
-                        print(player)
-                    }
-                }
-            } else {
-                print("No results")
-            }
-        } catch {
-            print("Couldn't fetch results")
-        } */
-   /*     func fetchLastStat(){
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            do {
-                stats = try context.fetch(Stat.fetchRequest()) // as! [Stat]
-            } catch {
-                print("Error Error Error")
-            }
-            
-        }
- */
-    /*    let setPeriodObject = UserDefaults.standard.object(forKey: "period")
-        if let setPeriod = setPeriodObject as? String {
-            if setPeriod == "1" {
-                    Period = 1
-                    periodLabel.text = "Period \(Period)"
-                    UserDefaults.standard.set("1", forKey: "period")
-                    currentMinute = 1
-                    print ("Period \(Period)")
-            } else if setPeriod == "2" {
-                    Period = 2
-                    periodLabel.text = "Period \(Period)"
-                    UserDefaults.standard.set("2", forKey: "period")
-                    currentMinute = 11
-                    print ("Period \(Period)")
-            } else if setPeriod == "3" {
-                    Period = 3
-                    periodLabel.text = "Period \(Period)"
-                    UserDefaults.standard.set("3", forKey: "period")
-                    currentMinute = 21
-                    print ("Period \(Period)")
-            } else if setPeriod == "4" {
-                    Period = 4
-                    periodLabel.text = "Period \(Period)"
-                    plusTwoMinutesLabel.text = "Finish"
-                    UserDefaults.standard.set("4", forKey: "period")
-                    currentMinute = 31
-                    print("Period \(Period)")
-            }
-                refreshMinutes()
-                print ("test1")
-                updateLabels()
-        } */
-        
-        let resetGameObject = UserDefaults.standard.object(forKey: "action")
-        if let resetGame = resetGameObject as? String {
-        if resetGame == "resetGame" {
-            currentScoreTeamOne = 0
-            currentScoreTeamOneLabel.text = "0"
-            currentScoreTeamTwo = 0
-            currentScoreTeamTwoLabel.text = "0"
-            GameTime = 10
-            Period = 1
-            resetMinutes()
-            updateLabels()
-            }
-        }
         
         
      /*   let lastStatMinuteObject = UserDefaults.standard.object(forKey: "minute")
@@ -469,11 +401,7 @@ class WhatHappendViewController: UIViewController {
             }
             
         } */
-        if collectStatsForBothTeams == 2 {
-            segueToWhoMade = "whatHappendToWhoMadeBothTeamsSegue"
-        } else {
-            segueToWhoMade = "whatHappendToWhoMadeItSegue"
-        }
+      
 
 //        let lastStatPlayerObject = UserDefaults.standard.object(forKey: "player")
 //        if let lastStatPlayer = lastStatPlayerObject as? String {
@@ -481,89 +409,22 @@ class WhatHappendViewController: UIViewController {
 //            //lastStatPlayerLabel.textColor = teamOneColor
 //        }
   
-     
-        if chosenTeam == 1 {
-                    if statAction == "2Pointer" {
-                            currentScoreTeamOne = currentScoreTeamOne + 2
-                            currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
-                        } else if statAction == "3Pointer" {
-                            currentScoreTeamOne = currentScoreTeamOne + 3
-                            currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
-                        } else if statAction == "FTmade" {
-                            currentScoreTeamOne = currentScoreTeamOne + 1
-                            currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
-                        }
-}
-      /*                      lastStatPlayerLabel.text = "\(statPlayer)"
-                            lastStatPlayerLabel.color = homeTeamColor
-                            if let lastStatTeamColor = lastStatTeamColorObject as? String {
-                                if homeTeamColor == "black" {
-                                    lastStatPlayerLabel.textColor = UIColor.black
-                                } else if homeTeamColor == "blue" {
-                                    lastStatPlayerLabel.textColor = UIColor.blue
-                                } else if homeTeamColor == "red" {
-                                    lastStatPlayerLabel.textColor = UIColor.red
-                                } else if homeTeamColor == "white" {
-                                    lastStatPlayerLabel.textColor = UIColor.white
-                                } else if homeTeamColor == "yellow" {
-                                    lastStatPlayerLabel.textColor = UIColor.yellow
-                                } else if homeTeamColor == "green" {
-                                    lastStatPlayerLabel.textColor = UIColor.green
-                                }
-                            }
-                        }
-                }
-    /*        } else if chosenTeam == 2 {
-                print("selected Team T2")
-                let lastStatActionObject = UserDefaults.standard.object(forKey: "action")
-                if let lastStatAction = lastStatActionObject as? String {
-                    if lastStatAction == "2Points" {
-                        currentScoreTeamTwo = currentScoreTeamTwo + 2
-                        currentScoreTeamTwoLabel.text = "\(currentScoreTeamTwo)"
-                    } else if lastStatAction == "3Points" {
-                        currentScoreTeamTwo = currentScoreTeamTwo + 3
-                        currentScoreTeamTwoLabel.text = "\(currentScoreTeamTwo)"
-                    } else if lastStatAction == "FTmade" {
-                        currentScoreTeamTwo = currentScoreTeamTwo + 1
-                        currentScoreTeamTwoLabel.text = "\(currentScoreTeamTwo)"
-                    }
-                    let lastStatPlayerObject = UserDefaults.standard.object(forKey: "player")
-                    if let lastStatPlayer = lastStatPlayerObject as? String {
-                        lastStatPlayerLabel.text = "\(lastStatPlayer)"
-                        let lastStatTeamColorObject = UserDefaults.standard.object(forKey: "OpponentJerseyColor")
-                        if let lastStatTeamColor = lastStatTeamColorObject as? String {
-                            if lastStatTeamColor == "black" {
-                                lastStatPlayerLabel.textColor = UIColor.black
-                            } else if lastStatTeamColor == "blue" {
-                                lastStatPlayerLabel.textColor = UIColor.blue
-                            } else if lastStatTeamColor == "red" {
-                                lastStatPlayerLabel.textColor = UIColor.red
-                            } else if lastStatTeamColor == "white" {
-                                lastStatPlayerLabel.textColor = UIColor.white
-                            } else if lastStatTeamColor == "yellow" {
-                                lastStatPlayerLabel.textColor = UIColor.yellow
-                            } else if lastStatTeamColor == "green" {
-                                lastStatPlayerLabel.textColor = UIColor.green
-                            }
-                        }
-                    }
-                    
-                }
-            }
+    lastStat()
+    updateLabels()
         }
-         */
- */
-        updateLabels()
-    }
-    func lastStat() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        do {
-            stats = try context.fetch(Stat.fetchRequest()) as! [Stat]
-            // lastStatActionLabel.text = stats.action
-            print (stats)
-        } catch {
-            print ("tüdülü Error")
+ 
+        func lastStat() {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            do {
+                stats = try context.fetch(Stat.fetchRequest()) as! [Stat]
+                pointsOfAction = stats.count
+                print ("\(pointsOfAction) Actions")
+            } catch {
+                print ("tüdülü Error")
+            }
+      //      lastStatActionLabel.text = "\(stats.action)"
         }
         
-    }
+    
 }
+
