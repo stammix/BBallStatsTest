@@ -30,6 +30,19 @@ class WhoMadeItViewController: UIViewController {
     var pointsOfAction = 0
     var actionNumber = 0
     
+    var t1p1 = "test"
+    var t1p2 = "fadf"
+    var t1p3 = "test"
+    var t1p4 = "fadf"
+    var t1p5 = "test"
+    var t1p6 = "fadf"
+    var t1p7 = "test"
+    var t1p8 = "fadf"
+    var t1p9 = "test"
+    var t1p10 = "fadf"
+    var t1p11 = "test"
+    var t1p12 = "fadf"
+    
     
     
   
@@ -117,7 +130,20 @@ class WhoMadeItViewController: UIViewController {
     
      override func viewDidLoad() {
      super.viewDidLoad()
-     //TeamColors
+     
+        jersey1Button.setTitle("\(t1p1)", for: .normal)
+        jersey2Button.setTitle("\(t1p2)", for: .normal)
+        jersey3Button.setTitle("\(t1p3)", for: .normal)
+        jersey4Button.setTitle("\(t1p4)", for: .normal)
+        jersey5Button.setTitle("\(t1p5)", for: .normal)
+        jersey6Button.setTitle("\(t1p6)", for: .normal)
+        jersey7Button.setTitle("\(t1p7)", for: .normal)
+        jersey8Button.setTitle("\(t1p8)", for: .normal)
+        jersey9Button.setTitle("\(t1p9)", for: .normal)
+        jersey10Button.setTitle("\(t1p10)", for: .normal)
+        jersey11Button.setTitle("\(t1p11)", for: .normal)
+        jersey12Button.setTitle("\(t1p12)", for: .normal)
+        //TeamColors
         
         
         JerseyColor = homeTeamColor
@@ -203,6 +229,7 @@ class WhoMadeItViewController: UIViewController {
         } else if tappedAction == "madeFreeThrow" {
             pointsOfAction = 1
         }
+        print("who \(t1p1) + \(t1p2) + \(t1p3) + \(t1p4) + \(t1p5) + \(t1p6) + \(t1p7) + \(t1p8) + \(t1p9) + \(t1p10) + \(t1p11) + \(t1p12)")
     }
     func saveStat() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -229,5 +256,10 @@ class WhoMadeItViewController: UIViewController {
         subVC.quarterLength = quarterLength
         subVC.GameTime = GameTime
         subVC.actionNumber = actionNumber
+        subVC.p1 = t1p1
+        subVC.p2 = t1p2
+        subVC.p3 = t1p3
+        subVC.p4 = t1p4
+        subVC.p5 = t1p5
     }
 }

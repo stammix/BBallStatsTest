@@ -27,7 +27,30 @@ class WhoMadeItBothTeamsViewController: UIViewController {
     var pointsOfAction = 0
     var actualQuarter = 0
  
-   
+    var t1p1 = "test"
+    var t1p2 = "fadf"
+    var t1p3 = "test"
+    var t1p4 = "fadf"
+    var t1p5 = "test"
+    var t1p6 = "fadf"
+    var t1p7 = "test"
+    var t1p8 = "fadf"
+    var t1p9 = "test"
+    var t1p10 = "fadf"
+    var t1p11 = "test"
+    var t1p12 = "fadf"
+    var t2p1 = "test"
+    var t2p2 = "fadf"
+    var t2p3 = "test"
+    var t2p4 = "fadf"
+    var t2p5 = "test"
+    var t2p6 = "fadf"
+    var t2p7 = "test"
+    var t2p8 = "fadf"
+    var t2p9 = "test"
+    var t2p10 = "fadf"
+    var t2p11 = "test"
+    var t2p12 = "fadf"
 
     
     
@@ -223,6 +246,32 @@ class WhoMadeItBothTeamsViewController: UIViewController {
         print("*** whoBoth homeColorPale \(homeColorPale), guestColorPale \(guestColorPale)")
         super.viewDidLoad()
         
+        T1Jersey1Button.setTitle("\(t1p1)", for: .normal)
+        T1Jersey2Button.setTitle("\(t1p2)", for: .normal)
+        T1Jersey3Button.setTitle("\(t1p3)", for: .normal)
+        T1Jersey4Button.setTitle("\(t1p4)", for: .normal)
+        T1Jersey5Button.setTitle("\(t1p5)", for: .normal)
+        T1Jersey6Button.setTitle("\(t1p6)", for: .normal)
+        T1Jersey7Button.setTitle("\(t1p7)", for: .normal)
+        T1Jersey8Button.setTitle("\(t1p8)", for: .normal)
+        T1Jersey9Button.setTitle("\(t1p9)", for: .normal)
+        T1Jersey10Button.setTitle("\(t1p10)", for: .normal)
+        T1Jersey11Button.setTitle("\(t1p11)", for: .normal)
+        T1Jersey12Button.setTitle("\(t1p12)", for: .normal)
+        T2Jersey1Button.setTitle("\(t2p1)", for: .normal)
+        T2Jersey2Button.setTitle("\(t2p2)", for: .normal)
+        T2Jersey3Button.setTitle("\(t2p3)", for: .normal)
+        T2Jersey4Button.setTitle("\(t2p4)", for: .normal)
+        T2Jersey5Button.setTitle("\(t2p5)", for: .normal)
+        T2Jersey6Button.setTitle("\(t2p6)", for: .normal)
+        T2Jersey7Button.setTitle("\(t2p7)", for: .normal)
+        T2Jersey8Button.setTitle("\(t2p8)", for: .normal)
+        T2Jersey9Button.setTitle("\(t2p9)", for: .normal)
+        T2Jersey10Button.setTitle("\(t2p10)", for: .normal)
+        T2Jersey11Button.setTitle("\(t2p11)", for: .normal)
+        T2Jersey12Button.setTitle("\(t2p12)", for: .normal)
+        
+        
         T1Jersey1Button.backgroundColor = homeTeamColor
         T1Jersey2Button.backgroundColor = homeTeamColor
         T1Jersey3Button.backgroundColor = homeTeamColor
@@ -337,6 +386,8 @@ class WhoMadeItBothTeamsViewController: UIViewController {
                 } else if tappedAction == "madeFreeThrow" {
                     pointsOfAction = 1
                 }
+                print("who2 \(t1p1) + \(t1p2) + \(t1p3) + \(t1p4) + \(t1p5) + \(t1p6) + \(t1p7) + \(t1p8) + \(t1p9) + \(t1p10) + \(t1p11) + \(t1p12)")
+                print("who2 \(t2p1) + \(t2p2) + \(t2p3) + \(t2p4) + \(t2p5) + \(t2p6) + \(t2p7) + \(t2p8) + \(t2p9) + \(t2p10) + \(t2p11) + \(t2p12)")
         }
             override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let subVC = segue.destination as! SubstitutionViewController
@@ -349,6 +400,19 @@ class WhoMadeItBothTeamsViewController: UIViewController {
             subVC.chosenTeam = chosenTeam
             subVC.quarterLength = quarterLength
             subVC.GameTime = GameTime
+            if chosenTeam == 1 {
+                subVC.p1 = t1p1
+                subVC.p2 = t1p2
+                subVC.p3 = t1p3
+                subVC.p4 = t1p4
+                subVC.p5 = t1p5
+            } else {
+                subVC.p1 = t2p1
+                subVC.p2 = t2p2
+                subVC.p3 = t2p3
+                subVC.p4 = t2p4
+                subVC.p5 = t2p5
+            }
     } 
     func saveStat() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

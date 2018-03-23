@@ -38,6 +38,31 @@ class WhatHappendViewController: UIViewController {
     var homeTeamName = ""
     var actionNumber = 1
     
+    var t1p1 = "test"
+    var t1p2 = "fadf"
+    var t1p3 = "test"
+    var t1p4 = "fadf"
+    var t1p5 = "test"
+    var t1p6 = "fadf"
+    var t1p7 = "test"
+    var t1p8 = "fadf"
+    var t1p9 = "test"
+    var t1p10 = "fadf"
+    var t1p11 = "test"
+    var t1p12 = "fadf"
+    var t2p1 = "test"
+    var t2p2 = "fadf"
+    var t2p3 = "test"
+    var t2p4 = "fadf"
+    var t2p5 = "test"
+    var t2p6 = "fadf"
+    var t2p7 = "test"
+    var t2p8 = "fadf"
+    var t2p9 = "test"
+    var t2p10 = "fadf"
+    var t2p11 = "test"
+    var t2p12 = "fadf"
+    
     var stats : [Stat] = []
     
     
@@ -255,6 +280,18 @@ class WhatHappendViewController: UIViewController {
         whoVC.quarterLength = quarterLength
         whoVC.actionNumber = actionNumber
         whoVC.actualQuarter = Period
+            whoVC.t1p1 = t1p1
+            whoVC.t1p2 = t1p2
+            whoVC.t1p3 = t1p3
+            whoVC.t1p4 = t1p4
+            whoVC.t1p5 = t1p5
+            whoVC.t1p6 = t1p6
+            whoVC.t1p7 = t1p7
+            whoVC.t1p8 = t1p8
+            whoVC.t1p9 = t1p9
+            whoVC.t1p10 = t1p10
+            whoVC.t1p11 = t1p11
+            whoVC.t1p12 = t1p12
      //   whoVC.GameTime = GameTime
         } else if segue.identifier == "whatHappendToWhoMadeBothTeamsSegue" {
         let whoVC = segue.destination as! WhoMadeItBothTeamsViewController
@@ -266,6 +303,30 @@ class WhatHappendViewController: UIViewController {
         whoVC.guestColorPale = guestColorPale
         whoVC.actionNumber = actionNumber
         whoVC.actualQuarter = Period
+            whoVC.t1p1 = t1p1
+            whoVC.t1p2 = t1p2
+            whoVC.t1p3 = t1p3
+            whoVC.t1p4 = t1p4
+            whoVC.t1p5 = t1p5
+            whoVC.t1p6 = t1p6
+            whoVC.t1p7 = t1p7
+            whoVC.t1p8 = t1p8
+            whoVC.t1p9 = t1p9
+            whoVC.t1p10 = t1p10
+            whoVC.t1p11 = t1p11
+            whoVC.t1p12 = t1p12
+            whoVC.t2p1 = t2p1
+            whoVC.t2p2 = t2p2
+            whoVC.t2p3 = t2p3
+            whoVC.t2p4 = t2p4
+            whoVC.t2p5 = t2p5
+            whoVC.t2p6 = t2p6
+            whoVC.t2p7 = t2p7
+            whoVC.t2p8 = t2p8
+            whoVC.t2p9 = t2p9
+            whoVC.t2p10 = t2p10
+            whoVC.t2p11 = t2p11
+            whoVC.t2p12 = t2p12
    //     whoVC.GameTime = GameTime
         } else if segue.identifier == "breakSegue" {
         let breakVC = segue.destination as! BreakViewController
@@ -379,6 +440,8 @@ class WhatHappendViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         
+        print("what \(t1p1) + \(t1p2) + \(t1p3) + \(t1p4) + \(t1p5) + \(t1p6) + \(t1p7) + \(t1p8) + \(t1p9) + \(t1p10) + \(t1p11) + \(t1p12)")
+        print("what \(t2p1) + \(t2p2) + \(t2p3) + \(t2p4) + \(t2p5) + \(t2p6) + \(t2p7) + \(t2p8) + \(t2p9) + \(t2p10) + \(t2p11) + \(t2p12)")
         
         
      /*   let lastStatMinuteObject = UserDefaults.standard.object(forKey: "minute")

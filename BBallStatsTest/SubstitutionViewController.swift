@@ -32,6 +32,12 @@ class SubstitutionViewController: UIViewController {
     var actionNumber = 0
     var pointsOfAction = 0
     
+    var p1 = "test"
+    var p2 = "fadf"
+    var p3 = "test"
+    var p4 = "fadf"
+    var p5 = "test"
+    
     @IBOutlet weak var SubButton1: UIButton!
     @IBOutlet weak var SubButton2: UIButton!
     @IBOutlet weak var SubButton3: UIButton!
@@ -207,6 +213,13 @@ class SubstitutionViewController: UIViewController {
             }
      */
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        SubButton1.setTitle("\(p1)", for: .normal)
+        SubButton2.setTitle("\(p2)", for: .normal)
+        SubButton3.setTitle("\(p3)", for: .normal)
+        SubButton4.setTitle("\(p4)", for: .normal)
+        SubButton5.setTitle("\(p5)", for: .normal)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let statVC = segue.destination as! WhatHappendViewController
