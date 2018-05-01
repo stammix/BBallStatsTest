@@ -30,8 +30,8 @@ class WhoMadeItViewController: UIViewController {
     var pointsOfAction = 0
     var actionNumber = 0
     
-    var t1p1 = "test"
-    var t1p2 = "fadf"
+    var t1p1 = "4"
+    var t1p2 = "5"
     var t1p3 = "test"
     var t1p4 = "fadf"
     var t1p5 = "test"
