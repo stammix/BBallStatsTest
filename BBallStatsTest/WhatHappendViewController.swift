@@ -28,7 +28,7 @@ class WhatHappendViewController: UIViewController {
     var tappedAction = "2pointer"
     var collectStatsForBothTeams = 1
     var chosenTeam = 1
-    var substitution = 0
+    var substitution = false
     var gonePlayer = 1
     var newPlayer = 6
     var statAction = ""
@@ -38,30 +38,64 @@ class WhatHappendViewController: UIViewController {
     var homeTeamName = ""
     var actionNumber = 1
     
-    var t1p1 = "test"
-    var t1p2 = "fadf"
-    var t1p3 = "test"
-    var t1p4 = "fadf"
-    var t1p5 = "test"
-    var t1p6 = "fadf"
-    var t1p7 = "test"
-    var t1p8 = "fadf"
-    var t1p9 = "test"
-    var t1p10 = "fadf"
-    var t1p11 = "test"
-    var t1p12 = "fadf"
-    var t2p1 = "test"
-    var t2p2 = "fadf"
-    var t2p3 = "test"
-    var t2p4 = "fadf"
-    var t2p5 = "test"
-    var t2p6 = "fadf"
-    var t2p7 = "test"
-    var t2p8 = "fadf"
-    var t2p9 = "test"
-    var t2p10 = "fadf"
-    var t2p11 = "test"
-    var t2p12 = "fadf"
+    /*    var t1p1 = "ffa"
+     var t1p2 = "fadf"
+     var t1p3 = "test"
+     var t1p4 = "fadf"
+     var t1p5 = "test"
+     var t1p6 = "fadf"
+     var t1p7 = "test"
+     var t1p8 = "fadf"
+     var t1p9 = "test"
+     var t1p10 = "fadf"
+     var t1p11 = "test"
+     var t1p12 = "fadf"
+     var t2p1 = "test"
+     var t2p2 = "fadf"
+     var t2p3 = "test"
+     var t2p4 = "fadf"
+     var t2p5 = "test"
+     var t2p6 = "fadf"
+     var t2p7 = "test"
+     var t2p8 = "fadf"
+     var t2p9 = "test"
+     var t2p10 = "fadf"
+     var t2p11 = "test"
+     var t2p12 = "fadf"
+     */
+    var t1p1 = 0
+    var t1p2 = 0
+    var t1p3 = 0
+    var t1p4 = 0
+    var t1p5 = 0
+    var t1p6 = 0
+    var t1p7 = 0
+    var t1p8 = 0
+    var t1p9 = 0
+    var t1p10 = 0
+    var t1p11 = 0
+    var t1p12 = 0
+    var t2p1 = 0
+    var t2p2 = 0
+    var t2p3 = 0
+    var t2p4 = 0
+    var t2p5 = 0
+    var t2p6 = 0
+    var t2p7 = 0
+    var t2p8 = 0
+    var t2p9 = 0
+    var t2p10 = 0
+    var t2p11 = 0
+    var t2p12 = 0
+    var onFieldTeamOne = [0, 1, 2, 3, 4]
+    var benchPlayersTeamOne = [5, 6, 7, 8, 9, 10, 11]
+    
+    static var persistentContainer: NSPersistentContainer {
+        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+    }
+    static var viewContext: NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
     
     var stats : [Stat] = []
     
@@ -439,49 +473,78 @@ class WhatHappendViewController: UIViewController {
            }
 
     override func viewWillAppear(_ animated: Bool) {
+        print(gonePlayer, newPlayer)
         
-        print("what \(t1p1) + \(t1p2) + \(t1p3) + \(t1p4) + \(t1p5) + \(t1p6) + \(t1p7) + \(t1p8) + \(t1p9) + \(t1p10) + \(t1p11) + \(t1p12)")
-        print("what \(t2p1) + \(t2p2) + \(t2p3) + \(t2p4) + \(t2p5) + \(t2p6) + \(t2p7) + \(t2p8) + \(t2p9) + \(t2p10) + \(t2p11) + \(t2p12)")
-        
-        
-     /*   let lastStatMinuteObject = UserDefaults.standard.object(forKey: "minute")
-        if let lastStatMinute = lastStatMinuteObject as? String {
-            
-            if lastStatMinute == "1" {
-                lastStatMinuteLabel.text = "1st Minute"
-            } else if lastStatMinute == "2" {
-                lastStatMinuteLabel.text = "2nd Minute"
-            } else if lastStatMinute == "3" {
-                lastStatMinuteLabel.text = "3rd Minute"
-            } else {
-            lastStatMinuteLabel.text = "\(lastStatMinute)th Minute"
+ /*       let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do {
+            let stats = try context.fetch(Stat.fetchRequest()) as! [Stat]
+            if stats.substitution == true {
+                gonePlayer = stats.gonePlayer
+                newPlayer = stats.newPlayer
             }
-            
-            let lastStatActionObject = UserDefaults.standard.object(forKey: "action")
-            
-            if let lastStatAction = lastStatActionObject as? String {
-                lastStatActionLabel.text = "\(lastStatAction)"
-            }
-            
-        } */
-      
-
-//        let lastStatPlayerObject = UserDefaults.standard.object(forKey: "player")
-//        if let lastStatPlayer = lastStatPlayerObject as? String {
-//            lastStatPlayerLabel.text = "\(lastStatPlayer)"
-//            //lastStatPlayerLabel.textColor = teamOneColor
+        } catch {
+            print ("tüdülü Error")
+        }
+        
+         */
+  //  let context = AppDelegate.viewContext
+        func lastStat2(matching statInfo: BBallStatsTest.Stat, in context: NSManagedObjectContext) -> Stat {
+        let request: NSFetchRequest<Stat> = Stat.fetchRequest()
+        request.predicate = NSPredicate(format: "action = %@", statInfo.actionID)
+        request.fetchLimit = 1
+        print (request)
+        }
+            //            do {
+//            let gameData = try context.fetch(Game.fetchRequest()) as! [Game]
+//            currentScoreTeamOneLabel.text = String(gameData.scoreT1)
+//            currentScoreTeamTwoLabel.text = String(gameData.scoreT2)
+//        } catch {
+//            print ("tüdülü Error")
 //        }
+       /* if substitution == true {
+            if chosenTeam == 1 {
+                onFieldTeamOne.remove(at: gonePlayer)
+                onFieldTeamOne.insert(newPlayer, at: gonePlayer)
+            }
+        }
+ */
+        onFieldTeamOne = [t1p1, t1p2, t1p3, t1p4, t1p5]
+        onFieldTeamOne.sort()
+        t1p1 = onFieldTeamOne[0]
+        t1p2 = onFieldTeamOne[1]
+        t1p3 = onFieldTeamOne[2]
+        t1p4 = onFieldTeamOne[3]
+        t1p5 = onFieldTeamOne[4]
+        benchPlayersTeamOne = [t1p6, t1p7, t1p8, t1p9, t1p10, t1p11, t1p12]
+        benchPlayersTeamOne.sort()
+        t1p6 = benchPlayersTeamOne[0]
+        t1p7 = benchPlayersTeamOne[1]
+        t1p8 = benchPlayersTeamOne[2]
+        t1p9 = benchPlayersTeamOne[3]
+        t1p10 = benchPlayersTeamOne[4]
+        t1p11 = benchPlayersTeamOne[5]
+        t1p12 = benchPlayersTeamOne[6]
+        
+        
+        print ("auf dem Feld \(onFieldTeamOne)")
+        print ("auf der Bank \(benchPlayersTeamOne)")
+        //   var onFieldTeamTwo = [0,1,2,3,4]
+        
+   /*     print("what \(t1p1) + \(t1p2) + \(t1p3) + \(t1p4) + \(t1p5) + \(t1p6) + \(t1p7) + \(t1p8) + \(t1p9) + \(t1p10) + \(t1p11) + \(t1p12)")
+        print("whatT2 \(t2p1) + \(t2p2) + \(t2p3) + \(t2p4) + \(t2p5) + \(t2p6) + \(t2p7) + \(t2p8) + \(t2p9) + \(t2p10) + \(t2p11) + \(t2p12)")
+     */
+        
   
     lastStat()
     updateLabels()
         }
  
         func lastStat() {
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let context = AppDelegate.viewContext
             do {
                 stats = try context.fetch(Stat.fetchRequest()) as! [Stat]
-                pointsOfAction = stats.count
-                print ("\(pointsOfAction) Actions")
+                actionNumber = stats.count
+                print ("\(actionNumber) Actions")
             } catch {
                 print ("tüdülü Error")
             }

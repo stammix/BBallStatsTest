@@ -26,32 +26,65 @@ class WhoMadeItBothTeamsViewController: UIViewController {
     var actionNumber = 0
     var pointsOfAction = 0
     var actualQuarter = 0
+    var currentScoreT1 = 0
+    var currentScoreT2 = 0
  
-    var t1p1 = "test"
-    var t1p2 = "fadf"
-    var t1p3 = "test"
-    var t1p4 = "fadf"
-    var t1p5 = "test"
-    var t1p6 = "fadf"
-    var t1p7 = "test"
-    var t1p8 = "fadf"
-    var t1p9 = "test"
-    var t1p10 = "fadf"
-    var t1p11 = "test"
-    var t1p12 = "fadf"
-    var t2p1 = "test"
-    var t2p2 = "fadf"
-    var t2p3 = "test"
-    var t2p4 = "fadf"
-    var t2p5 = "test"
-    var t2p6 = "fadf"
-    var t2p7 = "test"
-    var t2p8 = "fadf"
-    var t2p9 = "test"
-    var t2p10 = "fadf"
-    var t2p11 = "test"
-    var t2p12 = "fadf"
+    /*    var t1p1 = "ffa"
+     var t1p2 = "fadf"
+     var t1p3 = "test"
+     var t1p4 = "fadf"
+     var t1p5 = "test"
+     var t1p6 = "fadf"
+     var t1p7 = "test"
+     var t1p8 = "fadf"
+     var t1p9 = "test"
+     var t1p10 = "fadf"
+     var t1p11 = "test"
+     var t1p12 = "fadf"
+     var t2p1 = "test"
+     var t2p2 = "fadf"
+     var t2p3 = "test"
+     var t2p4 = "fadf"
+     var t2p5 = "test"
+     var t2p6 = "fadf"
+     var t2p7 = "test"
+     var t2p8 = "fadf"
+     var t2p9 = "test"
+     var t2p10 = "fadf"
+     var t2p11 = "test"
+     var t2p12 = "fadf"
+     */
+    var t1p1 = 0
+    var t1p2 = 0
+    var t1p3 = 0
+    var t1p4 = 0
+    var t1p5 = 0
+    var t1p6 = 0
+    var t1p7 = 0
+    var t1p8 = 0
+    var t1p9 = 0
+    var t1p10 = 0
+    var t1p11 = 0
+    var t1p12 = 0
+    var t2p1 = 0
+    var t2p2 = 0
+    var t2p3 = 0
+    var t2p4 = 0
+    var t2p5 = 0
+    var t2p6 = 0
+    var t2p7 = 0
+    var t2p8 = 0
+    var t2p9 = 0
+    var t2p10 = 0
+    var t2p11 = 0
+    var t2p12 = 0
 
+//    static var persistentContainer: NSPersistentContainer {
+//        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+//    }
+//    static var viewContext: NSManagedObjectContext {
+//        return persistentContainer.viewContext
+//    }
     
     
     @IBOutlet weak var T1Jersey1Button: UIButton!
@@ -416,7 +449,7 @@ class WhoMadeItBothTeamsViewController: UIViewController {
     } 
     func saveStat() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let stat = Stat(context: context)
+        if let stat = Stat(context: context) {
         // stat.actionID = UUID(actionNumber)
         stat.quarter = Int32(actualQuarter)
         stat.minute = Int32(actualMinute)
@@ -425,9 +458,28 @@ class WhoMadeItBothTeamsViewController: UIViewController {
         stat.action = tappedAction
         stat.points = Int32(pointsOfAction)
         stat.actionID = Int32(actionNumber)
+        
+        let gameData = Game(context: context)
+        if chosenTeam == 1 {
+            gameData.scoreT1 = gameData.scoreT1 + Int32(pointsOfAction)
+        } else if chosenTeam == 2 {
+            gameData.scoreT2 = gameData.scoreT2 + Int32(pointsOfAction)
+        }
+        print ("Team1: \(gameData.scoreT1), Team2: \(gameData.scoreT2)")
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        }
     }
-    
+//    func requestScore() {
+//    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//    let gameData = GameData(context: context)
+//    do {
+//    let gameScore = try context.fetch(GameData.fetchRequest()) as! [GameData]
+//        self.currentScoreT1 = Int(gameData.scoreT1)
+//        self.currentScoreT2 = Int(gameData.scoreT2)
+//    } catch {
+//    print ("tüdülü Error")
+//    }
+//    }
 }
 
 

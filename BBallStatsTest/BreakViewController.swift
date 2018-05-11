@@ -32,6 +32,13 @@ class BreakViewController: UIViewController, UITableViewDataSource, UITableViewD
     var statsOfPeriod2 : [Stat] = []
     var statsOfPeriod3 : [Stat] = []
     var statsOfPeriod4 : [Stat] = []
+    
+    static var persistendContainer: NSPersistentContainer {
+        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+    }
+    static var viewContext: NSManagedObjectContext {
+        return persistendContainer.viewContext
+    }
    
     @IBOutlet weak var statSummaryTableView: UITableView!
     

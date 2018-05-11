@@ -30,20 +30,38 @@ class WhoMadeItViewController: UIViewController {
     var pointsOfAction = 0
     var actionNumber = 0
     
-    var t1p1 = "4"
-    var t1p2 = "5"
-    var t1p3 = "test"
-    var t1p4 = "fadf"
-    var t1p5 = "test"
-    var t1p6 = "fadf"
-    var t1p7 = "test"
-    var t1p8 = "fadf"
-    var t1p9 = "test"
-    var t1p10 = "fadf"
-    var t1p11 = "test"
-    var t1p12 = "fadf"
+    /*    var t1p1 = "ffa"
+     var t1p2 = "fadf"
+     var t1p3 = "test"
+     var t1p4 = "fadf"
+     var t1p5 = "test"
+     var t1p6 = "fadf"
+     var t1p7 = "test"
+     var t1p8 = "fadf"
+     var t1p9 = "test"
+     var t1p10 = "fadf"
+     var t1p11 = "test"
+     var t1p12 = "fadf"
+     */
+    var t1p1 = 0
+    var t1p2 = 0
+    var t1p3 = 0
+    var t1p4 = 0
+    var t1p5 = 0
+    var t1p6 = 0
+    var t1p7 = 0
+    var t1p8 = 0
+    var t1p9 = 0
+    var t1p10 = 0
+    var t1p11 = 0
+    var t1p12 = 0
     
-    
+    static var persistendContainer: NSPersistentContainer {
+        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+    }
+    static var viewContext: NSManagedObjectContext {
+        return persistendContainer.viewContext
+    }
     
   
     @IBOutlet weak var jersey1Button: UIButton!

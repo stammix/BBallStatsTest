@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bVl-uw-c16">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bVl-uw-c16">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--In Game Settings View Controller-->
         <scene sceneID="c60-NP-Efa">
@@ -52,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opponent Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQ2-Hy-FWD">
-                                <rect key="frame" x="499.5" y="72.5" width="122.5" height="20.5"/>
+                                <rect key="frame" x="499" y="72.5" width="122.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -130,7 +125,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Yl5-cZ-Yec">
-                                <rect key="frame" x="506.5" y="105" width="110" height="70"/>
+                                <rect key="frame" x="506" y="105" width="110" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pIL-v2-TFv">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
@@ -543,6 +538,12 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oh7-R8-Ays">
+                                <rect key="frame" x="61" y="125" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -551,7 +552,9 @@
                             <constraint firstItem="jzY-6a-7Pj" firstAttribute="top" secondItem="Ehg-mw-VeC" secondAttribute="bottom" constant="33" id="7aw-8j-bCx"/>
                             <constraint firstItem="d88-Ro-1Y3" firstAttribute="leading" secondItem="2Jw-jl-fZn" secondAttribute="leadingMargin" id="8zo-Jh-kxz"/>
                             <constraint firstItem="YlJ-dZ-zBH" firstAttribute="top" secondItem="DkB-St-Khg" secondAttribute="bottom" constant="12" id="Ael-ML-Rnt"/>
+                            <constraint firstItem="oh7-R8-Ays" firstAttribute="leading" secondItem="2Jw-jl-fZn" secondAttribute="leadingMargin" constant="13" id="D2K-Dn-IOl"/>
                             <constraint firstItem="Yl5-cZ-Yec" firstAttribute="top" secondItem="YlJ-dZ-zBH" secondAttribute="top" id="E0T-5T-4KH"/>
+                            <constraint firstItem="YlJ-dZ-zBH" firstAttribute="leading" secondItem="oh7-R8-Ays" secondAttribute="trailing" constant="72" id="KEY-6A-oQJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="j2I-6Q-VAS" secondAttribute="trailing" constant="94" id="Kd5-vl-G1c"/>
                             <constraint firstItem="jzY-6a-7Pj" firstAttribute="centerY" secondItem="j2I-6Q-VAS" secondAttribute="centerY" id="Kzh-bw-8UG"/>
                             <constraint firstItem="jzY-6a-7Pj" firstAttribute="leading" secondItem="HC3-oJ-aLL" secondAttribute="trailing" constant="24" id="Lga-Ut-Vt8"/>
@@ -559,6 +562,7 @@
                             <constraint firstItem="N45-sG-RAo" firstAttribute="top" secondItem="cFW-zR-zjR" secondAttribute="bottom" constant="30" id="Ny6-JZ-V1W"/>
                             <constraint firstAttribute="bottom" secondItem="N45-sG-RAo" secondAttribute="bottom" constant="20" symbolic="YES" id="PKf-zu-3R6"/>
                             <constraint firstItem="XQ2-Hy-FWD" firstAttribute="centerX" secondItem="Yl5-cZ-Yec" secondAttribute="centerX" id="Rbu-N7-XVO"/>
+                            <constraint firstItem="oh7-R8-Ays" firstAttribute="centerY" secondItem="YlJ-dZ-zBH" secondAttribute="centerY" id="WJf-xY-e9w"/>
                             <constraint firstItem="cFW-zR-zjR" firstAttribute="leading" secondItem="2Jw-jl-fZn" secondAttribute="leading" constant="10" id="Wsf-7u-f4p"/>
                             <constraint firstItem="DkB-St-Khg" firstAttribute="leading" secondItem="zcv-vd-XGQ" secondAttribute="trailing" constant="90" id="XuI-gg-f25"/>
                             <constraint firstItem="j2I-6Q-VAS" firstAttribute="leading" secondItem="jzY-6a-7Pj" secondAttribute="trailing" constant="25" id="YIo-CI-qPd"/>

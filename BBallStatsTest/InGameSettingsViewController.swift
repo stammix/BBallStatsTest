@@ -22,7 +22,7 @@ class InGameSettingsViewController: UIViewController {
     var guestTeamScore = 0
     var collectStatsForBothTeams = 1
     var quarterLength = 10
-    var t1p1 = "test"
+/*    var t1p1 = "ffa"
     var t1p2 = "fadf"
     var t1p3 = "test"
     var t1p4 = "fadf"
@@ -46,6 +46,39 @@ class InGameSettingsViewController: UIViewController {
     var t2p10 = "fadf"
     var t2p11 = "test"
     var t2p12 = "fadf"
+    */
+    var t1p1 = 0
+    var t1p2 = 0
+    var t1p3 = 0
+    var t1p4 = 0
+    var t1p5 = 0
+    var t1p6 = 0
+    var t1p7 = 0
+    var t1p8 = 0
+    var t1p9 = 0
+    var t1p10 = 0
+    var t1p11 = 0
+    var t1p12 = 0
+    var t2p1 = 0
+    var t2p2 = 0
+    var t2p3 = 0
+    var t2p4 = 0
+    var t2p5 = 0
+    var t2p6 = 0
+    var t2p7 = 0
+    var t2p8 = 0
+    var t2p9 = 0
+    var t2p10 = 0
+    var t2p11 = 0
+    var t2p12 = 0
+    
+    static var persistendContainer: NSPersistentContainer {
+        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+    }
+    static var viewContext: NSManagedObjectContext {
+        return persistendContainer.viewContext
+    }
+    
   
 
     @IBOutlet weak var teamSwitch: UISwitch!
@@ -65,6 +98,32 @@ class InGameSettingsViewController: UIViewController {
     }
 
     @IBAction func tippOffButton(_ sender: AnyObject) {
+        t1p1 = Int(T1P1NrTextField.text!)!
+        t1p2 = Int(T1P2NrTextField.text!)!
+        t1p3 = Int(T1P3NrTextField.text!)!
+        t1p4 = Int(T1P4NrTextField.text!)!
+        t1p5 = Int(T1P5NrTextField.text!)!
+        t1p6 = Int(T1P6NrTextField.text!)!
+        t1p7 = Int(T1P7NrTextField.text!)!
+        t1p8 = Int(T1P8NrTextField.text!)!
+        t1p9 = Int(T1P9NrTextField.text!)!
+        t1p10 = Int(T1P10NrTextField.text!)!
+        t1p11 = Int(T1P11NrTextField.text!)!
+        t1p12 = Int(T1P12NrTextField.text!)!
+        t2p1 = Int(T2P1NrTextField.text!)!
+        t2p2 = Int(T2P2NrTextField.text!)!
+        t2p3 = Int(T2P3NrTextField.text!)!
+        t2p4 = Int(T2P4NrTextField.text!)!
+        t2p5 = Int(T2P5NrTextField.text!)!
+        t2p6 = Int(T2P6NrTextField.text!)!
+        t2p7 = Int(T2P7NrTextField.text!)!
+        t2p8 = Int(T2P8NrTextField.text!)!
+        t2p9 = Int(T2P9NrTextField.text!)!
+        t2p10 = Int(T2P10NrTextField.text!)!
+        t2p11 = Int(T2P11NrTextField.text!)!
+        t2p12 = Int(T2P12NrTextField.text!)!
+        
+       /* save for later e.g. adding player-names in settings
         t1p1 = T1P1NrTextField.text!
         t1p2 = T1P2NrTextField.text!
         t1p3 = T1P3NrTextField.text!
@@ -89,6 +148,7 @@ class InGameSettingsViewController: UIViewController {
         t2p10 = T2P10NrTextField.text!
         t2p11 = T2P11NrTextField.text!
         t2p12 = T2P12NrTextField.text!
+        */
          self.performSegue(withIdentifier: "SettingsToGameSegue", sender: self)
     }
     @IBOutlet weak var T1P1NrTextField: UITextField!

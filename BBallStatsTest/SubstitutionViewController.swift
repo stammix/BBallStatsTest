@@ -31,12 +31,28 @@ class SubstitutionViewController: UIViewController {
     var GameTime = 10
     var actionNumber = 0
     var pointsOfAction = 0
+    var fieldPlayers = [0,1,2,3,4]
+    var benchPlayers = [5,6,7,8,9,10,11]
     
-    var p1 = "test"
+    var p1 = 0
+    var p2 = 1
+    var p3 = 2
+    var p4 = 3
+    var p5 = 4
+   /*
+    var p1 = "dfa"
     var p2 = "fadf"
     var p3 = "test"
     var p4 = "fadf"
     var p5 = "test"
+    */
+    
+    static var persistendContainer: NSPersistentContainer {
+        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+    }
+    static var viewContext: NSManagedObjectContext {
+        return persistendContainer.viewContext
+    }
     
     @IBOutlet weak var SubButton1: UIButton!
     @IBOutlet weak var SubButton2: UIButton!
@@ -46,29 +62,29 @@ class SubstitutionViewController: UIViewController {
     
     
     @IBAction func SubForP1(_ sender: UIButton) {
-        gonePlayer = 1
+        gonePlayer = 0
         saveStat()
         let _ = navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func SubForP2(_ sender: UIButton) {
-        gonePlayer = 2
+        gonePlayer = 1
         saveStat()
         let _ = navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func SubForP3(_ sender: UIButton) {
-        gonePlayer = 3
+        gonePlayer = 2
         saveStat()
         let _ = navigationController?.popToRootViewController(animated: true)
     }
     @IBAction func SubForP4(_ sender: UIButton) {
-        gonePlayer = 4
+        gonePlayer = 3
         saveStat()
         let _ = navigationController?.popToRootViewController(animated: true)
     }
     @IBAction func SubForP5(_ sender: UIButton) {
-        gonePlayer = 5
+        gonePlayer = 4
         saveStat()
         let _ = navigationController?.popToRootViewController(animated: true)
     }
@@ -242,6 +258,12 @@ class SubstitutionViewController: UIViewController {
         stat.player = Int32(newPlayer)
         stat.action = tappedAction
         stat.points = Int32(pointsOfAction)
+        stat.gonePlayer = Int32(gonePlayer)
+        stat.newPlayer = Int32(newPlayer)
+        stat.substitution = true
+     //   let team = Team(context: context)
+    //    team.fieldPlayers! = fieldPlayers
+      //  team.benchPlayers = NSManagedObject(benchPlayers)
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
     }
 
