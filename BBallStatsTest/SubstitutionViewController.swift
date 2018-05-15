@@ -32,11 +32,11 @@ class SubstitutionViewController: UIViewController {
     var actionNumber = 0
     var pointsOfAction = 0
     
-    var p1 = "test"
-    var p2 = "fadf"
-    var p3 = "test"
-    var p4 = "fadf"
-    var p5 = "test"
+    var p1 = 0
+    var p2 = 0
+    var p3 = 0
+    var p4 = 0
+    var p5 = 0
     
     @IBOutlet weak var SubButton1: UIButton!
     @IBOutlet weak var SubButton2: UIButton!

@@ -22,30 +22,30 @@ class InGameSettingsViewController: UIViewController {
     var guestTeamScore = 0
     var collectStatsForBothTeams = 1
     var quarterLength = 10
-    var t1p1 = "test"
-    var t1p2 = "fadf"
-    var t1p3 = "test"
-    var t1p4 = "fadf"
-    var t1p5 = "test"
-    var t1p6 = "fadf"
-    var t1p7 = "test"
-    var t1p8 = "fadf"
-    var t1p9 = "test"
-    var t1p10 = "fadf"
-    var t1p11 = "test"
-    var t1p12 = "fadf"
-    var t2p1 = "test"
-    var t2p2 = "fadf"
-    var t2p3 = "test"
-    var t2p4 = "fadf"
-    var t2p5 = "test"
-    var t2p6 = "fadf"
-    var t2p7 = "test"
-    var t2p8 = "fadf"
-    var t2p9 = "test"
-    var t2p10 = "fadf"
-    var t2p11 = "test"
-    var t2p12 = "fadf"
+    var t1p1 = 0
+    var t1p2 = 0
+    var t1p3 = 0
+    var t1p4 = 0
+    var t1p5 = 0
+    var t1p6 = 0
+    var t1p7 = 0
+    var t1p8 = 0
+    var t1p9 = 0
+    var t1p10 = 0
+    var t1p11 = 0
+    var t1p12 = 0
+    var t2p1 = 0
+    var t2p2 = 0
+    var t2p3 = 0
+    var t2p4 = 0
+    var t2p5 = 0
+    var t2p6 = 0
+    var t2p7 = 0
+    var t2p8 = 0
+    var t2p9 = 0
+    var t2p10 = 0
+    var t2p11 = 0
+    var t2p12 = 0
   
 
     @IBOutlet weak var teamSwitch: UISwitch!
@@ -65,7 +65,7 @@ class InGameSettingsViewController: UIViewController {
     }
 
     @IBAction func tippOffButton(_ sender: AnyObject) {
-        t1p1 = T1P1NrTextField.text!
+        t1p1 = (T1P1NrTextField.text!)
         t1p2 = T1P2NrTextField.text!
         t1p3 = T1P3NrTextField.text!
         t1p4 = T1P4NrTextField.text!
