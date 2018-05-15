@@ -449,15 +449,15 @@ class WhoMadeItBothTeamsViewController: UIViewController {
     } 
     func saveStat() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        if let stat = Stat(context: context) {
+        let stat = Stat(context: context) {
         // stat.actionID = UUID(actionNumber)
-        stat.quarter = Int32(actualQuarter)
-        stat.minute = Int32(actualMinute)
-        stat.chosenTeam = Int32(chosenTeam)
-        stat.player = Int32(player)
-        stat.action = tappedAction
-        stat.points = Int32(pointsOfAction)
-        stat.actionID = Int32(actionNumber)
+        Stat.quarter = Int32(actualQuarter)
+        Stat.minute = Int32(actualMinute)
+        Stat.chosenTeam = Int32(chosenTeam)
+        Stat.player = Int32(player)
+        Stat.action = tappedAction
+        Stat.points = Int32(pointsOfAction)
+        Stat.actionID = Int32(actionNumber)
         
         let gameData = Game(context: context)
         if chosenTeam == 1 {
