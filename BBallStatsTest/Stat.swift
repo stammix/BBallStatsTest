@@ -6,9 +6,9 @@
 //  Copyright © 2018 Fred Erik. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreData
 
 class Stat: NSManagedObject {
-
+    
 }

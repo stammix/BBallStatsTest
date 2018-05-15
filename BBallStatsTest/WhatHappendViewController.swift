@@ -90,13 +90,6 @@ class WhatHappendViewController: UIViewController {
     var onFieldTeamOne = [0, 1, 2, 3, 4]
     var benchPlayersTeamOne = [5, 6, 7, 8, 9, 10, 11]
     
-    static var persistentContainer: NSPersistentContainer {
-        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer
-    }
-    static var viewContext: NSManagedObjectContext {
-        return persistentContainer.viewContext
-    }
-    
     var stats : [Stat] = []
     
     
@@ -487,13 +480,14 @@ class WhatHappendViewController: UIViewController {
         }
         
          */
-  //  let context = AppDelegate.viewContext
-        func lastStat2(matching statInfo: BBallStatsTest.Stat, in context: NSManagedObjectContext) -> Stat {
-        let request: NSFetchRequest<Stat> = Stat.fetchRequest()
-        request.predicate = NSPredicate(format: "action = %@", statInfo.actionID)
-        request.fetchLimit = 1
-        print (request)
-        }
+//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        func lastStat2(matching statInfo: BBallStatsTest.Stat, in context: NSManagedObjectContext) -> Stat {
+//        let request: NSFetchRequest<Stat> = Stat.fetchRequest()
+//        request.predicate = NSPredicate(format: "action = %@", statInfo.actionID)
+//        request.fetchLimit = 1
+//        return Stat.
+//        print (request)
+//        }
             //            do {
 //            let gameData = try context.fetch(Game.fetchRequest()) as! [Game]
 //            currentScoreTeamOneLabel.text = String(gameData.scoreT1)
@@ -540,7 +534,7 @@ class WhatHappendViewController: UIViewController {
         }
  
         func lastStat() {
-            let context = AppDelegate.viewContext
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             do {
                 stats = try context.fetch(Stat.fetchRequest()) as! [Stat]
                 actionNumber = stats.count

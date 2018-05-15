@@ -258,9 +258,9 @@ class SubstitutionViewController: UIViewController {
         stat.player = Int32(newPlayer)
         stat.action = tappedAction
         stat.points = Int32(pointsOfAction)
-        stat.gonePlayer = Int32(gonePlayer)
-        stat.newPlayer = Int32(newPlayer)
-        stat.substitution = true
+      //  stat.gonePlayer = Int32(gonePlayer)
+       // stat.newPlayer = Int32(newPlayer)
+       // stat.substitution = true
      //   let team = Team(context: context)
     //    team.fieldPlayers! = fieldPlayers
       //  team.benchPlayers = NSManagedObject(benchPlayers)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Game" representedClassName="Game" syncable="YES" codeGenerationType="category">
+    <entity name="Game" representedClassName="Game" syncable="YES" codeGenerationType="class">
         <attribute name="actualMinute" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="scoreT1" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -11,7 +11,7 @@
         <attribute name="timeoutsT2" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="opponents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Team" inverseName="games" inverseEntity="Team" syncable="YES"/>
     </entity>
-    <entity name="Player" representedClassName="Player" syncable="YES" codeGenerationType="category">
+    <entity name="Player" representedClassName="Player" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="totalfreethrowattempts" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -27,7 +27,7 @@
         <relationship name="stats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Stat" inverseName="maker" inverseEntity="Stat" syncable="YES"/>
         <relationship name="team" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="players" inverseEntity="Team" syncable="YES"/>
     </entity>
-    <entity name="Stat" representedClassName="Stat" syncable="YES" codeGenerationType="category">
+    <entity name="Stat" representedClassName="Stat" syncable="YES" codeGenerationType="class">
         <attribute name="action" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="actionID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="actionName" optional="YES" attributeType="String" syncable="YES"/>
@@ -41,7 +41,7 @@
         <attribute name="substitution" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="maker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="stats" inverseEntity="Player" syncable="YES"/>
     </entity>
-    <entity name="Team" representedClassName="Team" syncable="YES" codeGenerationType="category">
+    <entity name="Team" representedClassName="Team" syncable="YES" codeGenerationType="class">
         <attribute name="benchPlayers" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="fieldPlayers" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -61,9 +61,9 @@
         <relationship name="players" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Player" inverseName="team" inverseEntity="Player" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Game" positionX="-261" positionY="90" width="128" height="178"/>
-        <element name="Player" positionX="106" positionY="26" width="128" height="253"/>
-        <element name="Stat" positionX="306" positionY="38" width="128" height="223"/>
-        <element name="Team" positionX="-63" positionY="-19" width="128" height="298"/>
+        <element name="Game" positionX="-261" positionY="90" width="128" height="180"/>
+        <element name="Player" positionX="106" positionY="26" width="128" height="255"/>
+        <element name="Stat" positionX="306" positionY="38" width="128" height="225"/>
+        <element name="Team" positionX="-63" positionY="-19" width="128" height="300"/>
     </elements>
 </model>
