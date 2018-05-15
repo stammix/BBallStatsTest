@@ -38,6 +38,9 @@ class WhatHappendViewController: UIViewController {
     var homeTeamName = ""
     var actionNumber = 1
     
+    var onFieldTeamOne = [0,1,2,3,4]
+    var benchPlayersTeamOne = [5,6,7,8,9,10,11,12]
+    
     var t1p1 = "test"
     var t1p2 = "fadf"
     var t1p3 = "test"
@@ -439,6 +442,27 @@ class WhatHappendViewController: UIViewController {
            }
 
     override func viewWillAppear(_ animated: Bool) {
+        
+        onFieldTeamOne = [t1p1, t1p2, t1p3, t1p4, t1p5]
+        onFieldTeamOne.sort()
+        t1p1 = onFieldTeamOne[0]
+        t1p2 = onFieldTeamOne[1]
+        t1p3 = onFieldTeamOne[2]
+        t1p4 = onFieldTeamOne[3]
+        t1p5 = onFieldTeamOne[4]
+        benchPlayersTeamOne = [t1p6, t1p7, t1p8, t1p9, t1p10, t1p11, t1p12]
+        benchPlayersTeamOne.sort()
+        t1p6 = benchPlayersTeamOne[0]
+        t1p7 = benchPlayersTeamOne[1]
+        t1p8 = benchPlayersTeamOne[2]
+        t1p9 = benchPlayersTeamOne[3]
+        t1p10 = benchPlayersTeamOne[4]
+        t1p11 = benchPlayersTeamOne[5]
+        t1p12 = benchPlayersTeamOne[6]
+        
+        
+        print ("auf dem Feld \(onFieldTeamOne)")
+        print ("auf der Bank \(benchPlayersTeamOne)")
         
         print("what \(t1p1) + \(t1p2) + \(t1p3) + \(t1p4) + \(t1p5) + \(t1p6) + \(t1p7) + \(t1p8) + \(t1p9) + \(t1p10) + \(t1p11) + \(t1p12)")
         print("what \(t2p1) + \(t2p2) + \(t2p3) + \(t2p4) + \(t2p5) + \(t2p6) + \(t2p7) + \(t2p8) + \(t2p9) + \(t2p10) + \(t2p11) + \(t2p12)")
