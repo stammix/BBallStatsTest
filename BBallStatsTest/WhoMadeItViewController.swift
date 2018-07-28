@@ -29,6 +29,7 @@ class WhoMadeItViewController: UIViewController {
     var GameTime = 10
     var pointsOfAction = 0
     var actionNumber = 0
+    var fieldplayers = [Int()]
     
     var t1p1 = 0
     var t1p2 = 0
@@ -143,19 +144,20 @@ class WhoMadeItViewController: UIViewController {
      override func viewDidLoad() {
      super.viewDidLoad()
      
-        jersey1Button.setTitle("\(t1p1)", for: .normal)
-        jersey2Button.setTitle("\(t1p2)", for: .normal)
-        jersey3Button.setTitle("\(t1p3)", for: .normal)
-        jersey4Button.setTitle("\(t1p4)", for: .normal)
-        jersey5Button.setTitle("\(t1p5)", for: .normal)
-        jersey6Button.setTitle("\(t1p6)", for: .normal)
-        jersey7Button.setTitle("\(t1p7)", for: .normal)
-        jersey8Button.setTitle("\(t1p8)", for: .normal)
-        jersey9Button.setTitle("\(t1p9)", for: .normal)
-        jersey10Button.setTitle("\(t1p10)", for: .normal)
-        jersey11Button.setTitle("\(t1p11)", for: .normal)
-        jersey12Button.setTitle("\(t1p12)", for: .normal)
+        jersey1Button.setTitle("\(fieldplayers[0])", for: .normal)
+        jersey2Button.setTitle("\(fieldplayers[1])", for: .normal)
+        jersey3Button.setTitle("\(fieldplayers[2])", for: .normal)
+        jersey4Button.setTitle("\(fieldplayers[3])", for: .normal)
+        jersey5Button.setTitle("\(fieldplayers[4])", for: .normal)
+        jersey6Button.setTitle("\(fieldplayers[5])", for: .normal)
+        jersey7Button.setTitle("\(fieldplayers[6])", for: .normal)
+        jersey8Button.setTitle("\(fieldplayers[7])", for: .normal)
+        jersey9Button.setTitle("\(fieldplayers[8])", for: .normal)
+        jersey10Button.setTitle("\(fieldplayers[9])", for: .normal)
+        jersey11Button.setTitle("\(fieldplayers[10])", for: .normal)
+        jersey12Button.setTitle("\(fieldplayers[11])", for: .normal)
         //TeamColors
+        print(fieldplayers[0])
         
         
         JerseyColor = homeTeamColor
@@ -268,10 +270,6 @@ class WhoMadeItViewController: UIViewController {
         subVC.quarterLength = quarterLength
         subVC.GameTime = GameTime
         subVC.actionNumber = actionNumber
-        subVC.p1 = t1p1
-        subVC.p2 = t1p2
-        subVC.p3 = t1p3
-        subVC.p4 = t1p4
-        subVC.p5 = t1p5
+        subVC.fieldplayers = fieldplayers
     }
 }

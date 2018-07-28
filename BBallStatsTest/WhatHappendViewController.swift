@@ -40,6 +40,7 @@ class WhatHappendViewController: UIViewController {
     
     var onFieldTeamOne = [0,1,2,3,4]
     var benchPlayersTeamOne = [5,6,7,8,9,10,11,12]
+    var team1 = [Int()]
     
     var t1p1 = 0
     var t1p2 = 0
@@ -283,19 +284,7 @@ class WhatHappendViewController: UIViewController {
         whoVC.quarterLength = quarterLength
         whoVC.actionNumber = actionNumber
         whoVC.actualQuarter = Period
-            whoVC.t1p1 = t1p1
-            whoVC.t1p2 = t1p2
-            whoVC.t1p3 = t1p3
-            whoVC.t1p4 = t1p4
-            whoVC.t1p5 = t1p5
-            whoVC.t1p6 = t1p6
-            whoVC.t1p7 = t1p7
-            whoVC.t1p8 = t1p8
-            whoVC.t1p9 = t1p9
-            whoVC.t1p10 = t1p10
-            whoVC.t1p11 = t1p11
-            whoVC.t1p12 = t1p12
-     //   whoVC.GameTime = GameTime
+        whoVC.fieldplayers = team1
         } else if segue.identifier == "whatHappendToWhoMadeBothTeamsSegue" {
         let whoVC = segue.destination as! WhoMadeItBothTeamsViewController
         whoVC.tappedAction = sender as! String
@@ -306,30 +295,6 @@ class WhatHappendViewController: UIViewController {
         whoVC.guestColorPale = guestColorPale
         whoVC.actionNumber = actionNumber
         whoVC.actualQuarter = Period
-            whoVC.t1p1 = t1p1
-            whoVC.t1p2 = t1p2
-            whoVC.t1p3 = t1p3
-            whoVC.t1p4 = t1p4
-            whoVC.t1p5 = t1p5
-            whoVC.t1p6 = t1p6
-            whoVC.t1p7 = t1p7
-            whoVC.t1p8 = t1p8
-            whoVC.t1p9 = t1p9
-            whoVC.t1p10 = t1p10
-            whoVC.t1p11 = t1p11
-            whoVC.t1p12 = t1p12
-            whoVC.t2p1 = t2p1
-            whoVC.t2p2 = t2p2
-            whoVC.t2p3 = t2p3
-            whoVC.t2p4 = t2p4
-            whoVC.t2p5 = t2p5
-            whoVC.t2p6 = t2p6
-            whoVC.t2p7 = t2p7
-            whoVC.t2p8 = t2p8
-            whoVC.t2p9 = t2p9
-            whoVC.t2p10 = t2p10
-            whoVC.t2p11 = t2p11
-            whoVC.t2p12 = t2p12
    //     whoVC.GameTime = GameTime
         } else if segue.identifier == "breakSegue" {
         let breakVC = segue.destination as! BreakViewController
@@ -405,113 +370,86 @@ class WhatHappendViewController: UIViewController {
         if guestTeamColor == UIColor.green {
             guestColorPale = true
         }
-        //Period = 1
-       // UserDefaults.standard.set("1", forKey: "period")
-        
-   /*     let setPeriodObject = UserDefaults.standard.object(forKey: "period")
-        if let setPeriod = setPeriodObject as? String {
-            if setPeriod == "1" {
-                Period = 1
-                periodLabel.text = "Period \(Period)"
-                UserDefaults.standard.set("1", forKey: "period")
-                currentMinute = 1
-                print ("Period \(Period)")
-            } else if setPeriod == "2" {
-                Period = 2
-                periodLabel.text = "Period \(Period)"
-                UserDefaults.standard.set("2", forKey: "period")
-                currentMinute = 11
-                print ("Period \(Period)")
-            } else if setPeriod == "3" {
-                Period = 3
-                periodLabel.text = "Period \(Period)"
-                UserDefaults.standard.set("3", forKey: "period")
-                currentMinute = 21
-                print ("Period \(Period)")
-            } else if setPeriod == "4" {
-                Period = 4
-                periodLabel.text = "Period \(Period)"
-                plusTwoMinutesLabel.text = "Finish"
-                UserDefaults.standard.set("4", forKey: "period")
-                currentMinute = 31
-                print("Period \(Period)")
-            }
-        } */
+
         refreshMinutes()
         updateLabels()
            }
 
     override func viewWillAppear(_ animated: Bool) {
-        
-        onFieldTeamOne = [t1p1, t1p2, t1p3, t1p4, t1p5]
-        onFieldTeamOne.sort()
-        t1p1 = onFieldTeamOne[0]
-        t1p2 = onFieldTeamOne[1]
-        t1p3 = onFieldTeamOne[2]
-        t1p4 = onFieldTeamOne[3]
-        t1p5 = onFieldTeamOne[4]
-        benchPlayersTeamOne = [t1p6, t1p7, t1p8, t1p9, t1p10, t1p11, t1p12]
-        benchPlayersTeamOne.sort()
-        t1p6 = benchPlayersTeamOne[0]
-        t1p7 = benchPlayersTeamOne[1]
-        t1p8 = benchPlayersTeamOne[2]
-        t1p9 = benchPlayersTeamOne[3]
-        t1p10 = benchPlayersTeamOne[4]
-        t1p11 = benchPlayersTeamOne[5]
-        t1p12 = benchPlayersTeamOne[6]
-        
-        
-        print ("auf dem Feld \(onFieldTeamOne)")
-        print ("auf der Bank \(benchPlayersTeamOne)")
-        
-        print("what \(t1p1) + \(t1p2) + \(t1p3) + \(t1p4) + \(t1p5) + \(t1p6) + \(t1p7) + \(t1p8) + \(t1p9) + \(t1p10) + \(t1p11) + \(t1p12)")
-        print("what \(t2p1) + \(t2p2) + \(t2p3) + \(t2p4) + \(t2p5) + \(t2p6) + \(t2p7) + \(t2p8) + \(t2p9) + \(t2p10) + \(t2p11) + \(t2p12)")
-        
-        
-     /*   let lastStatMinuteObject = UserDefaults.standard.object(forKey: "minute")
-        if let lastStatMinute = lastStatMinuteObject as? String {
             
-            if lastStatMinute == "1" {
-                lastStatMinuteLabel.text = "1st Minute"
-            } else if lastStatMinute == "2" {
-                lastStatMinuteLabel.text = "2nd Minute"
-            } else if lastStatMinute == "3" {
-                lastStatMinuteLabel.text = "3rd Minute"
-            } else {
-            lastStatMinuteLabel.text = "\(lastStatMinute)th Minute"
-            }
-            
-            let lastStatActionObject = UserDefaults.standard.object(forKey: "action")
-            
-            if let lastStatAction = lastStatActionObject as? String {
-                lastStatActionLabel.text = "\(lastStatAction)"
-            }
-            
-        } */
-      
-
-//        let lastStatPlayerObject = UserDefaults.standard.object(forKey: "player")
-//        if let lastStatPlayer = lastStatPlayerObject as? String {
-//            lastStatPlayerLabel.text = "\(lastStatPlayer)"
-//            //lastStatPlayerLabel.textColor = teamOneColor
-//        }
-  
+//        onFieldTeamOne = [t1p1, t1p2, t1p3, t1p4, t1p5]
+//        onFieldTeamOne.sort()
+//        t1p1 = onFieldTeamOne[0]
+//        t1p2 = onFieldTeamOne[1]
+//        t1p3 = onFieldTeamOne[2]
+//        t1p4 = onFieldTeamOne[3]
+//        t1p5 = onFieldTeamOne[4]
+//        benchPlayersTeamOne = [t1p6, t1p7, t1p8, t1p9, t1p10, t1p11, t1p12]
+//        benchPlayersTeamOne.sort()
+//        t1p6 = benchPlayersTeamOne[0]
+//        t1p7 = benchPlayersTeamOne[1]
+//        t1p8 = benchPlayersTeamOne[2]
+//        t1p9 = benchPlayersTeamOne[3]
+//        t1p10 = benchPlayersTeamOne[4]
+//        t1p11 = benchPlayersTeamOne[5]
+//        t1p12 = benchPlayersTeamOne[6]
+//
+//
+//        print ("on the field \(onFieldTeamOne)")
+//        print ("on the bench \(benchPlayersTeamOne)")
+        
+//        print("what \(t1p1) + \(t1p2) + \(t1p3) + \(t1p4) + \(t1p5) + \(t1p6) + \(t1p7) + \(t1p8) + \(t1p9) + \(t1p10) + \(t1p11) + \(t1p12)")
+//        print("what \(t2p1) + \(t2p2) + \(t2p3) + \(t2p4) + \(t2p5) + \(t2p6) + \(t2p7) + \(t2p8) + \(t2p9) + \(t2p10) + \(t2p11) + \(t2p12)")
+    loadTeamPlayers()
     lastStat()
     updateLabels()
         }
- 
+    
         func lastStat() {
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             do {
                 stats = try context.fetch(Stat.fetchRequest()) as! [Stat]
-                pointsOfAction = stats.count
-                print ("\(pointsOfAction) Actions")
+                actionNumber = stats.count
+      //          print ("\(actionNumber) Actions")
             } catch {
                 print ("tüdülü Error")
             }
       //      lastStatActionLabel.text = "\(stats.action)"
         }
-        
+    
+    func loadTeamPlayers() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do {
+            let loadPlayers = try context.fetch(Team1.fetchRequest()) as [Team1]
+            for team in loadPlayers {
+        //      let starters = team.startingfive
+                t1p1 = Int(team.player1)
+                t1p2 = Int(team.player2)
+                team1 = team.fieldplayers!
+          //      team1 = [Int(team.player1), Int(team.player2), Int(team.player3), Int(team.player4), Int(team.player5), Int(team.player6), Int(team.player7), Int(team.player8), Int(team.player9), Int(team.player10), Int(team.player11), Int(team.player12)]
+            }
+            /*      do {
+             
+             let loadMin = try context.fetch(Game.fetchRequest()) as [Game]
+             for stat in loadMin {
+             //         let lastStatMinute = stat.minute
+             lastStatMinuteLabel.text = "\(stat.minute)th minute"
+             }
+             } catch {
+             print("didn't load minute")
+             }
+             
+             let starters = loadPlayers.startingfive
+            self.t1p1 = starters[0] as Int
+            print("starters \(loadPlayers)")
+ */           //let playerNumber = loadPlayers.count
+//            t1p1 = Int(loadPlayers.player1)
+  //          print("T1P1: \(loadPlayers.player1)")
+        //print(loadPlayers.count)
+        } catch {
+            print("didn't load players")
+        }
+    }
     
 }
 

@@ -22,30 +22,10 @@ class InGameSettingsViewController: UIViewController {
     var guestTeamScore = 0
     var collectStatsForBothTeams = 1
     var quarterLength = 10
-    var t1p1 = 0
-    var t1p2 = 0
-    var t1p3 = 0
-    var t1p4 = 0
-    var t1p5 = 0
-    var t1p6 = 0
-    var t1p7 = 0
-    var t1p8 = 0
-    var t1p9 = 0
-    var t1p10 = 0
-    var t1p11 = 0
-    var t1p12 = 0
-    var t2p1 = 0
-    var t2p2 = 0
-    var t2p3 = 0
-    var t2p4 = 0
-    var t2p5 = 0
-    var t2p6 = 0
-    var t2p7 = 0
-    var t2p8 = 0
-    var t2p9 = 0
-    var t2p10 = 0
-    var t2p11 = 0
-    var t2p12 = 0
+    var starters: [Int32] = []
+    @NSManaged var fieldplayers: [NSNumber]
+    @NSManaged var benchplayers: [NSNumber]
+    
   
 
     @IBOutlet weak var teamSwitch: UISwitch!
@@ -65,30 +45,7 @@ class InGameSettingsViewController: UIViewController {
     }
 
     @IBAction func tippOffButton(_ sender: AnyObject) {
-        t1p1 = (T1P1NrTextField.text!)
-        t1p2 = T1P2NrTextField.text!
-        t1p3 = T1P3NrTextField.text!
-        t1p4 = T1P4NrTextField.text!
-        t1p5 = T1P5NrTextField.text!
-        t1p6 = T1P6NrTextField.text!
-        t1p7 = T1P7NrTextField.text!
-        t1p8 = T1P8NrTextField.text!
-        t1p9 = T1P9NrTextField.text!
-        t1p10 = T1P10NrTextField.text!
-        t1p11 = T1P11NrTextField.text!
-        t1p12 = T1P12NrTextField.text!
-        t2p1 = T2P1NrTextField.text!
-        t2p2 = T2P2NrTextField.text!
-        t2p3 = T2P3NrTextField.text!
-        t2p4 = T2P4NrTextField.text!
-        t2p5 = T2P5NrTextField.text!
-        t2p6 = T2P6NrTextField.text!
-        t2p7 = T2P7NrTextField.text!
-        t2p8 = T2P8NrTextField.text!
-        t2p9 = T2P9NrTextField.text!
-        t2p10 = T2P10NrTextField.text!
-        t2p11 = T2P11NrTextField.text!
-        t2p12 = T2P12NrTextField.text!
+        createTeams()
          self.performSegue(withIdentifier: "SettingsToGameSegue", sender: self)
     }
     @IBOutlet weak var T1P1NrTextField: UITextField!
@@ -182,34 +139,6 @@ class InGameSettingsViewController: UIViewController {
         whatVC.currentScoreTeamTwo = guestTeamScore
         whatVC.collectStatsForBothTeams = collectStatsForBothTeams
         whatVC.quarterLength = quarterLength
-        whatVC.t1p1 = t1p1
-        whatVC.t1p2 = t1p2
-        whatVC.t1p3 = t1p3
-        whatVC.t1p4 = t1p4
-        whatVC.t1p5 = t1p5
-        whatVC.t1p6 = t1p6
-        whatVC.t1p7 = t1p7
-        whatVC.t1p8 = t1p8
-        whatVC.t1p9 = t1p9
-        whatVC.t1p10 = t1p10
-        whatVC.t1p11 = t1p11
-        whatVC.t1p12 = t1p12
-        if collectStatsForBothTeams == 2 {
-            whatVC.t2p1 = t2p1
-            whatVC.t2p2 = t2p2
-            whatVC.t2p3 = t2p3
-            whatVC.t2p4 = t2p4
-            whatVC.t2p5 = t2p5
-            whatVC.t2p6 = t2p6
-            whatVC.t2p7 = t2p7
-            whatVC.t2p8 = t2p8
-            whatVC.t2p9 = t2p9
-            whatVC.t2p10 = t2p10
-            whatVC.t2p11 = t2p11
-            whatVC.t2p12 = t2p12
-      
-            
-        }
     }
     
     
@@ -223,7 +152,59 @@ class InGameSettingsViewController: UIViewController {
     
     }
     override func viewWillAppear(_ animated: Bool) {
-       
-        print("Settings \(t1p1) + \(t1p2) + \(t1p3) + \(t1p4) + \(t1p5) + \(t1p6) + \(t1p7) + \(t1p8) + \(t1p9) + \(t1p10) + \(t1p11) + \(t1p12)")
+      
+    }
+    func createTeams() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let team1 = Team1(context: context)
+  //      starters = [Int32(T1P1NrTextField.text!)!, Int32(T1P2NrTextField.text!)!]
+  //      players.startingfive = starters as NSObject
+        team1.player1 = Int32(T1P1NrTextField.text!)!
+        team1.player2 = Int32(T1P2NrTextField.text!)!
+        team1.player3 = Int32(T1P3NrTextField.text!)!
+        team1.player4 = Int32(T1P4NrTextField.text!)!
+        team1.player5 = Int32(T1P5NrTextField.text!)!
+        team1.player6 = Int32(T1P6NrTextField.text!)!
+        team1.player7 = Int32(T1P7NrTextField.text!)!
+        team1.player8 = Int32(T1P8NrTextField.text!)!
+        team1.player9 = Int32(T1P9NrTextField.text!)!
+        team1.player10 = Int32(T1P10NrTextField.text!)!
+        team1.player11 = Int32(T1P11NrTextField.text!)!
+        team1.player12 = Int32(T1P12NrTextField.text!)!
+        team1.fieldplayers = [Int(T1P1NrTextField.text!)!, Int(T1P2NrTextField.text!)!, Int(T1P3NrTextField.text!)!, Int(T1P4NrTextField.text!)!, Int(T1P5NrTextField.text!)!]
+        
+//        team1.fieldplayers = [T1P1NrTextField.text!, T1P2NrTextField.text!, T1P3NrTextField.text!, T1P4NrTextField.text!, T1P5NrTextField.text!] as! [Int]
+  /*      let team2 =
+    //    starters = [Int32(T1P1NrTextField.text!)!, Int32(T1P2NrTextField.text!)!]
+    //    players.startingfive = starters as NSObject
+        team2.player1 = Int32(T2P1NrTextField.text!)!
+        team2.player2 = Int32(T2P2NrTextField.text!)!
+        team2.player3 = Int32(T2P3NrTextField.text!)!
+        team2.player4 = Int32(T2P4NrTextField.text!)!
+        team2.player5 = Int32(T2P5NrTextField.text!)!
+        team2.player6 = Int32(T2P6NrTextField.text!)!
+        team2.player7 = Int32(T2P7NrTextField.text!)!
+        team2.player8 = Int32(T2P8NrTextField.text!)!
+        team2.player9 = Int32(T2P9NrTextField.text!)!
+        team2.player10 = Int32(T2P10NrTextField.text!)!
+        team2.player11 = Int32(T2P11NrTextField.text!)!
+        team2.player12 = Int32(T2P12NrTextField.text!)!
+        
+*/
+/*        let todaysdate = Game(context: context)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy.MM.dd - HH.mm.ss"
+        let date = dateFormatter.date(from: dateFormatter.dateFormat)
+       // let date = Date()
+        let calendar = Calendar.current
+        let comp = calendar.dateComponents([.hour, .minute, .second], from: date!)
+        let hour = comp.hour
+        let minute = comp.minute
+        let second = comp.second
+   //     todaysdate.datetest?.addingTimeInterval(.)
+       // todaysdate.date = NSObject(hour + minute + second)
+  */
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+   //     print(players)
     }
 }

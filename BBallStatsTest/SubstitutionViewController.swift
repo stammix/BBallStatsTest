@@ -32,6 +32,7 @@ class SubstitutionViewController: UIViewController {
     var actionNumber = 0
     var pointsOfAction = 0
     
+    var fieldplayers = [Int()]
     var p1 = 0
     var p2 = 0
     var p3 = 0
@@ -215,11 +216,11 @@ class SubstitutionViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        SubButton1.setTitle("\(p1)", for: .normal)
-        SubButton2.setTitle("\(p2)", for: .normal)
-        SubButton3.setTitle("\(p3)", for: .normal)
-        SubButton4.setTitle("\(p4)", for: .normal)
-        SubButton5.setTitle("\(p5)", for: .normal)
+        SubButton1.setTitle("\(fieldplayers[0])", for: .normal)
+        SubButton2.setTitle("\(fieldplayers[1])", for: .normal)
+        SubButton3.setTitle("\(fieldplayers[2])", for: .normal)
+        SubButton4.setTitle("\(fieldplayers[3])", for: .normal)
+        SubButton5.setTitle("\(fieldplayers[4])", for: .normal)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let statVC = segue.destination as! WhatHappendViewController
@@ -234,6 +235,13 @@ class SubstitutionViewController: UIViewController {
     }
     func saveStat() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let substitution = Team1(context: context)
+        let helpvar = fieldplayers[gonePlayer]
+        let helpvar2 = ("player" + String(newPlayer))
+        fieldplayers[gonePlayer] = fieldplayers[newPlayer]
+        fieldplayers[newPlayer] = helpvar
+        
+        
         let stat = Stat(context: context)
         // stat.actionID = UUID(actionNumber)
         stat.quarter = Int32(actualQuarter)
