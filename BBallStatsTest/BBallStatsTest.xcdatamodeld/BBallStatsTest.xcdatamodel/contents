@@ -75,7 +75,7 @@
         <element name="Game" positionX="-209" positionY="36" width="128" height="120"/>
         <element name="Player" positionX="81" positionY="36" width="128" height="238"/>
         <element name="Stat" positionX="250" positionY="48" width="128" height="163"/>
-        <element name="Team1" positionX="-63" positionY="27" width="128" height="313"/>
+        <element name="Team1" positionX="-63" positionY="27" width="128" height="315"/>
         <element name="Team2" positionX="-63" positionY="351" width="128" height="300"/>
     </elements>
 </model>

@@ -405,25 +405,30 @@ class WhatHappendViewController: UIViewController {
     updateLabels()
         }
     
-        func lastStat() {
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-            do {
-                stats = try context.fetch(Stat.fetchRequest()) as! [Stat]
+    func lastStat() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do {
+            let lastStat = try context.fetch(Stat.fetchRequest()) as [Stat]
+            for stat in lastStat {
                 actionNumber = stats.count
+                lastStatActionLabel.text = stat.action
+                lastStatPlayerLabel.text = String(stat.player)
+                lastStatMinuteLabel.text = String(stat.minute)
       //          print ("\(actionNumber) Actions")
-            } catch {
-                print ("tüdülü Error")
+            }
+                } catch {
+                print("tüdülü Error")
             }
       //      lastStatActionLabel.text = "\(stats.action)"
         }
-    
+
     func loadTeamPlayers() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         do {
             let loadPlayers = try context.fetch(Team1.fetchRequest()) as [Team1]
             for team in loadPlayers {
-                team1 = team.fieldplayers as! [Int]
-     //           team1 = [Int(team.player1), Int(team.player2), Int(team.player3), Int(team.player4), Int(team.player5), Int(team.player6), Int(team.player7), Int(team.player8), Int(team.player9), Int(team.player10), Int(team.player11), Int(team.player12)]
+     //           onFieldTeamOne = team.fieldplayers!
+            team1 = [Int(team.player1), Int(team.player2), Int(team.player3), Int(team.player4), Int(team.player5), Int(team.player6), Int(team.player7), Int(team.player8), Int(team.player9), Int(team.player10), Int(team.player11), Int(team.player12)]
             }
             /*      do {
              
@@ -447,6 +452,6 @@ class WhatHappendViewController: UIViewController {
             print("didn't load players")
         }
     }
-    
 }
+
 
