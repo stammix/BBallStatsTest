@@ -422,11 +422,8 @@ class WhatHappendViewController: UIViewController {
         do {
             let loadPlayers = try context.fetch(Team1.fetchRequest()) as [Team1]
             for team in loadPlayers {
-        //      let starters = team.startingfive
-                t1p1 = Int(team.player1)
-                t1p2 = Int(team.player2)
-                team1 = team.fieldplayers!
-          //      team1 = [Int(team.player1), Int(team.player2), Int(team.player3), Int(team.player4), Int(team.player5), Int(team.player6), Int(team.player7), Int(team.player8), Int(team.player9), Int(team.player10), Int(team.player11), Int(team.player12)]
+                team1 = team.fieldplayers as! [Int]
+     //           team1 = [Int(team.player1), Int(team.player2), Int(team.player3), Int(team.player4), Int(team.player5), Int(team.player6), Int(team.player7), Int(team.player8), Int(team.player9), Int(team.player10), Int(team.player11), Int(team.player12)]
             }
             /*      do {
              

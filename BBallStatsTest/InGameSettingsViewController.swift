@@ -171,7 +171,7 @@ class InGameSettingsViewController: UIViewController {
         team1.player10 = Int32(T1P10NrTextField.text!)!
         team1.player11 = Int32(T1P11NrTextField.text!)!
         team1.player12 = Int32(T1P12NrTextField.text!)!
-        team1.fieldplayers = [Int(T1P1NrTextField.text!)!, Int(T1P2NrTextField.text!)!, Int(T1P3NrTextField.text!)!, Int(T1P4NrTextField.text!)!, Int(T1P5NrTextField.text!)!]
+        team1.fieldplayers = [Int(T1P1NrTextField.text!), Int(T1P2NrTextField.text!), Int(T1P3NrTextField.text!), Int(T1P4NrTextField.text!), Int(T1P5NrTextField.text!)] as? [Int]
         
 //        team1.fieldplayers = [T1P1NrTextField.text!, T1P2NrTextField.text!, T1P3NrTextField.text!, T1P4NrTextField.text!, T1P5NrTextField.text!] as! [Int]
   /*      let team2 =

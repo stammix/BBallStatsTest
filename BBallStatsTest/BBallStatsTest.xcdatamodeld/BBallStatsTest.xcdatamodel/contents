@@ -33,9 +33,9 @@
         <attribute name="quarter" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="Team1" representedClassName="Team1" syncable="YES" codeGenerationType="class">
-        <attribute name="benchplayers" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="[Int()]" syncable="YES"/>
+        <attribute name="benchplayers" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="[Int]" syncable="YES"/>
         <attribute name="color" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="fieldplayers" optional="YES" attributeType="Transformable" customClassName="[Int()]" syncable="YES"/>
+        <attribute name="fieldplayers" optional="YES" attributeType="Transformable" customClassName="[Int]" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="player1" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="player2" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -49,7 +49,6 @@
         <attribute name="player10" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="player11" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="player12" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="startingfive" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="team1or2" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="players" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Player" syncable="YES"/>
     </entity>
@@ -76,7 +75,7 @@
         <element name="Game" positionX="-209" positionY="36" width="128" height="120"/>
         <element name="Player" positionX="81" positionY="36" width="128" height="238"/>
         <element name="Stat" positionX="250" positionY="48" width="128" height="163"/>
-        <element name="Team1" positionX="-63" positionY="27" width="128" height="328"/>
+        <element name="Team1" positionX="-63" positionY="27" width="128" height="313"/>
         <element name="Team2" positionX="-63" positionY="351" width="128" height="300"/>
     </elements>
 </model>
