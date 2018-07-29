@@ -35,7 +35,7 @@
     <entity name="Team1" representedClassName="Team1" syncable="YES" codeGenerationType="class">
         <attribute name="benchplayers" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="[Int]" syncable="YES"/>
         <attribute name="color" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="fieldplayers" optional="YES" attributeType="Transformable" customClassName="[Int]" syncable="YES"/>
+        <attribute name="fieldplayers" optional="YES" attributeType="Transformable" customClassName="[Int32]" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="player1" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="player2" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>

@@ -38,7 +38,7 @@ class WhatHappendViewController: UIViewController {
     var homeTeamName = ""
     var actionNumber = 1
     
-    var onFieldTeamOne = [0,1,2,3,4]
+    var onFieldTeamOne: [Int32] = [0,1,2,3,4]
     var benchPlayersTeamOne = [5,6,7,8,9,10,11,12]
     var team1 = [Int()]
     
@@ -428,7 +428,8 @@ class WhatHappendViewController: UIViewController {
             let loadPlayers = try context.fetch(Team1.fetchRequest()) as [Team1]
             for team in loadPlayers {
      //           onFieldTeamOne = team.fieldplayers!
-            team1 = [Int(team.player1), Int(team.player2), Int(team.player3), Int(team.player4), Int(team.player5), Int(team.player6), Int(team.player7), Int(team.player8), Int(team.player9), Int(team.player10), Int(team.player11), Int(team.player12)]
+                team1 = [Int(team.player1), Int(team.player2), Int(team.player3), Int(team.player4), Int(team.player5), Int(team.player6), Int(team.player7), Int(team.player8), Int(team.player9), Int(team.player10), Int(team.player11), Int(team.player12)]
+                print("what \(team1)")
             }
             /*      do {
              

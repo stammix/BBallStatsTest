@@ -132,14 +132,6 @@ class WhoMadeItViewController: UIViewController {
         playerToSwitchIn = 12
         self.performSegue(withIdentifier: "WhoMadeItToSubstituionT1Segue", sender: playerToSwitchIn)
     }
- /*
-    func createStat(_ sender: AnyObject?) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let newStat = Stats(context: context)
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        let _ = navigationController?.popViewController(animated: true)
-        
-    } */
     
      override func viewDidLoad() {
      super.viewDidLoad()
@@ -243,20 +235,10 @@ class WhoMadeItViewController: UIViewController {
         } else if tappedAction == "madeFreeThrow" {
             pointsOfAction = 1
         }
-        print("who \(t1p1) + \(t1p2) + \(t1p3) + \(t1p4) + \(t1p5) + \(t1p6) + \(t1p7) + \(t1p8) + \(t1p9) + \(t1p10) + \(t1p11) + \(t1p12)")
+        print("who \(fieldplayers)")
     }
     func saveStat() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let stat = Stat(context: context)
-        // stat.actionID = UUID(actionNumber)
-        stat.quarter = Int32(actualQuarter)
-        stat.minute = Int32(actualMinute)
-        stat.chosenTeam = Int32(chosenTeam)
-        stat.player = Int32(player)
-        stat.action = tappedAction
-        stat.points = Int32(pointsOfAction)
-        stat.actionID = Int32(actionNumber)
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        createStat(actionID: 1, quarter: Int32(actualQuarter), minute: Int32(actualMinute), action: tappedAction, chosenTeam: Int32(chosenTeam), player: Int32(player), points: Int32(pointsOfAction))
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

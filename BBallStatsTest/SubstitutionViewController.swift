@@ -233,16 +233,16 @@ class SubstitutionViewController: UIViewController {
         statVC.homeColorPale = homeColorPale
         statVC.guestColorPale = guestColorPale
     }
-    func saveStat() {
+   func saveStat() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let substitution = Team1(context: context)
-        let helpvar = gonePlayer
-        substitution.fieldplayers![gonePlayer] = newPlayer
-        substitution.benchplayers![newPlayer] = helpvar
+        let helpvar = Int32(gonePlayer)
+        substitution.fieldplayers?[gonePlayer] = Int32(newPlayer)
+        substitution.benchplayers?[newPlayer] = helpvar
         
         
         
-        let stat = Stat(context: context)
+/*        let stat = Stat(context: context)
         // stat.actionID = UUID(actionNumber)
         stat.quarter = Int32(actualQuarter)
         stat.minute = Int32(actualMinute)
@@ -251,6 +251,6 @@ class SubstitutionViewController: UIViewController {
         stat.action = tappedAction
         stat.points = Int32(pointsOfAction)
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
-    }
+    */}
 
 }

@@ -22,6 +22,7 @@
 		86C6208A2062AFE400F4CCCF /* WhatHappendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C620812062AFE300F4CCCF /* WhatHappendViewController.swift */; };
 		86C6208B2062AFE400F4CCCF /* WhoMadeItBothTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C620822062AFE300F4CCCF /* WhoMadeItBothTeamsViewController.swift */; };
 		86C6208C2062AFE400F4CCCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C620832062AFE400F4CCCF /* Main.storyboard */; };
+		86F02144210DF7330073080D /* StatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F02143210DF7330073080D /* StatHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		86C620812062AFE300F4CCCF /* WhatHappendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatHappendViewController.swift; sourceTree = "<group>"; };
 		86C620822062AFE300F4CCCF /* WhoMadeItBothTeamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoMadeItBothTeamsViewController.swift; sourceTree = "<group>"; };
 		86C620832062AFE400F4CCCF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		86F02143210DF7330073080D /* StatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				86C620822062AFE300F4CCCF /* WhoMadeItBothTeamsViewController.swift */,
 				86C6207C2062AFE200F4CCCF /* SubstitutionViewController.swift */,
 				86C6207F2062AFE300F4CCCF /* BreakViewController.swift */,
+				86F02143210DF7330073080D /* StatHelper.swift */,
 				86C620832062AFE400F4CCCF /* Main.storyboard */,
 				86C6207B2062AFE200F4CCCF /* BballStatsJerseyWhite.png */,
 				86C6207D2062AFE300F4CCCF /* BballStatsJerseyBlack.png */,
@@ -289,6 +292,7 @@
 				86C620882062AFE400F4CCCF /* BreakViewController.swift in Sources */,
 				86C620892062AFE400F4CCCF /* InGameSettingsViewController.swift in Sources */,
 				86C6204B2062AFBB00F4CCCF /* AppDelegate.swift in Sources */,
+				86F02144210DF7330073080D /* StatHelper.swift in Sources */,
 				86C6208A2062AFE400F4CCCF /* WhatHappendViewController.swift in Sources */,
 				86C620852062AFE400F4CCCF /* SubstitutionViewController.swift in Sources */,
 				86C620532062AFBB00F4CCCF /* BBallStatsTest.xcdatamodeld in Sources */,
