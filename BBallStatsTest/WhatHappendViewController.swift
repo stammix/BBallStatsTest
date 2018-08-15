@@ -237,14 +237,14 @@ class WhatHappendViewController: UIViewController {
     }
     
     @IBAction func FTmadePressed(_ sender: UIButton) {
-        tappedAction = "madeFreeThrow"
+        tappedAction = "made Free Throw"
         actionNumber = actionNumber + 1
         self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: tappedAction)
         
     }
     
     @IBAction func FTmissedPressed(_ sender: UIButton) {
-        tappedAction = "missedFreeThrow"
+        tappedAction = "missed Free Throw"
         actionNumber = actionNumber + 1
         self.performSegue(withIdentifier: "\(segueToWhoMade)", sender: tappedAction)
         
@@ -412,7 +412,14 @@ class WhatHappendViewController: UIViewController {
             for stat in lastStat {
                 actionNumber = stats.count
                 lastStatActionLabel.text = stat.action
-                lastStatPlayerLabel.text = String(stat.player)
+                actionNumber = stats.count
+                lastStatActionLabel.text = stat.action
+                if stat.chosenTeam == 1 {
+                    lastStatPlayerLabel.textColor = homeTeamColor
+                } else {
+                    lastStatPlayerLabel.textColor = guestTeamColor
+                }
+                lastStatPlayerLabel.text = "# \(String(stat.player))"
                 lastStatMinuteLabel.text = String(stat.minute)
       //          print ("\(actionNumber) Actions")
             }

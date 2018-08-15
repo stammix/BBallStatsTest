@@ -423,6 +423,7 @@ class WhoMadeItBothTeamsViewController: UIViewController {
         stat.chosenTeam = Int32(chosenTeam)
         stat.player = Int32(player)
         stat.action = tappedAction
+        stat.chosenTeam = Int32(chosenTeam)
         stat.points = Int32(pointsOfAction)
         stat.actionID = Int32(actionNumber)
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
