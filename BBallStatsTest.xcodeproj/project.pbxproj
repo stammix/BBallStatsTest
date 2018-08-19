@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		862BD1602129AF010026EA86 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862BD15F2129AF010026EA86 /* GameHelper.swift */; };
 		86C6204B2062AFBB00F4CCCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6204A2062AFBB00F4CCCF /* AppDelegate.swift */; };
 		86C620532062AFBB00F4CCCF /* BBallStatsTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86C620512062AFBB00F4CCCF /* BBallStatsTest.xcdatamodeld */; };
 		86C620552062AFBB00F4CCCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86C620542062AFBB00F4CCCF /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		862BD15F2129AF010026EA86 /* GameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
 		86C620472062AFBB00F4CCCF /* BBallStatsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBallStatsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C6204A2062AFBB00F4CCCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86C620522062AFBB00F4CCCF /* BBallStatsTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BBallStatsTest.xcdatamodel; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				86C6207C2062AFE200F4CCCF /* SubstitutionViewController.swift */,
 				86C6207F2062AFE300F4CCCF /* BreakViewController.swift */,
 				86F02143210DF7330073080D /* StatHelper.swift */,
+				862BD15F2129AF010026EA86 /* GameHelper.swift */,
 				86C620832062AFE400F4CCCF /* Main.storyboard */,
 				86C6207B2062AFE200F4CCCF /* BballStatsJerseyWhite.png */,
 				86C6207D2062AFE300F4CCCF /* BballStatsJerseyBlack.png */,
@@ -293,6 +296,7 @@
 				86C620892062AFE400F4CCCF /* InGameSettingsViewController.swift in Sources */,
 				86C6204B2062AFBB00F4CCCF /* AppDelegate.swift in Sources */,
 				86F02144210DF7330073080D /* StatHelper.swift in Sources */,
+				862BD1602129AF010026EA86 /* GameHelper.swift in Sources */,
 				86C6208A2062AFE400F4CCCF /* WhatHappendViewController.swift in Sources */,
 				86C620852062AFE400F4CCCF /* SubstitutionViewController.swift in Sources */,
 				86C620532062AFBB00F4CCCF /* BBallStatsTest.xcdatamodeld in Sources */,

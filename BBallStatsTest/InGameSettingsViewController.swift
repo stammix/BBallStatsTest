@@ -39,24 +39,23 @@ class InGameSettingsViewController: UIViewController {
    
     @IBAction func resetGameButton(_ sender: AnyObject) {
        //trying to batch-delete all CoreData-Entries
-        
-        /* let fetchRequest = NSFetchRequest(entityName: "Stat")
-        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-        do {
-            try managedObjectContext.executeRequest(batchDeleteRequest)
-        } catch {
-            print("oooopsi didn't work")
-        }*/
-        
-        Period = 1
-        Minute = 1
-        homeTeamScore = 0
-        guestTeamScore = 0
+//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Stat")
+//        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+//        do {
+//            try managedObjectContext.executeRequest(batchDeleteRequest)
+//        } catch {
+//            print("oooopsi didn't work")
+//        }
+ 
+        let initID = 0101
+        let date = Date()
+        createGame(gameID: Int32(initID), datetest: date, team1: "testTeam1", team2: "testTeam2", gameTime: Int32(quarterLength), quarter: 1, minute: 1, scoreTeam1: 0, scoreTeam2: 0)
     }
 
     @IBAction func tippOffButton(_ sender: AnyObject) {
         createTeams()
-         self.performSegue(withIdentifier: "SettingsToGameSegue", sender: self)
+        self.performSegue(withIdentifier: "SettingsToGameSegue", sender: self)
     }
     @IBOutlet weak var T1P1NrTextField: UITextField!
     @IBOutlet weak var T1P2NrTextField: UITextField!

@@ -209,6 +209,27 @@ class WhatHappendViewController: UIViewController {
         } else {
             periodLabel.text = "Overtime \(Period - 4)"
         }
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do {
+            let loadScore = try context.fetch(Game.fetchRequest()) as [Game]
+            for score in loadScore {
+                if chosenTeam == 1 {
+                    currentScoreTeamOne = (currentScoreTeamOne + pointsOfAction)
+                    score.scoreTeam1 = Int32(currentScoreTeamOne)
+                    (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                } else {
+                    currentScoreTeamTwo = (currentScoreTeamTwo + pointsOfAction)
+                    score.scoreTeam2 = Int32(currentScoreTeamTwo)
+                    (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                }
+                currentScoreTeamOneLabel.text = String(score.scoreTeam1)
+                currentScoreTeamTwoLabel.text = String(score.scoreTeam2)
+            }
+            
+        } catch {
+            print("tüdülü Error")
+        }
 //        if chosenTeam == 1 {
 //            if statAction == "2Pointer" {
 //                currentScoreTeamOne = currentScoreTeamOne + 2
@@ -331,8 +352,8 @@ class WhatHappendViewController: UIViewController {
         GameTime = quarterLength
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
-        currentScoreTeamTwoLabel.text = "\(currentScoreTeamTwo)"
+     //   currentScoreTeamOneLabel.text = "\(currentScoreTeamOne)"
+    //    currentScoreTeamTwoLabel.text = "\(currentScoreTeamTwo)"
       
         if homeTeamColor == UIColor.black {
             homeColorPale = false
@@ -403,7 +424,22 @@ class WhatHappendViewController: UIViewController {
     loadTeamPlayers()
     lastStat()
     updateLabels()
+}
+    
+    func loadGame() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do {
+            let gameData = try context.fetch(Game.fetchRequest()) as [Game]
+            for data in gameData {
+                currentMinute = Int(data.minute)
+                currentScoreTeamOne = Int(data.scoreTeam1)
+                currentScoreTeamTwo = Int(data.scoreTeam2)
+            }
+            
+        } catch {
+              print("tüdülü Error")
         }
+    }
     
     func lastStat() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -421,11 +457,12 @@ class WhatHappendViewController: UIViewController {
                 }
                 lastStatPlayerLabel.text = "# \(String(stat.player))"
                 lastStatMinuteLabel.text = String(stat.minute)
-      //          print ("\(actionNumber) Actions")
+                pointsOfAction = Int(stat.points)
             }
                 } catch {
                 print("tüdülü Error")
             }
+        updateGame(quarter: Int32(Period), minute: Int32(currentMinute), scoreTeam1: Int32(currentScoreTeamOne), scoreTeam2: Int32(currentScoreTeamTwo))
       //      lastStatActionLabel.text = "\(stats.action)"
         }
 

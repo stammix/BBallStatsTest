@@ -236,7 +236,7 @@ class SubstitutionViewController: UIViewController {
    func saveStat() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let substitution = Team1(context: context)
-        let helpvar = Int32(gonePlayer)
+        let helpvar = gonePlayer
         substitution.fieldplayers?[gonePlayer] = Int32(newPlayer)
         substitution.benchplayers?[newPlayer] = helpvar
         
