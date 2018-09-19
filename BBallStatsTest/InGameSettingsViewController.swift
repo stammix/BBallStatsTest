@@ -52,7 +52,36 @@ class InGameSettingsViewController: UIViewController {
         let date = Date()
         createGame(gameID: Int32(initID), datetest: date, team1: "testTeam1", team2: "testTeam2", gameTime: Int32(quarterLength), quarter: 1, minute: 1, scoreTeam1: 0, scoreTeam2: 0)
     }
-
+    
+    @IBAction func deleteCoreData(_ sender: UIButton) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do {
+            let deleteStats = try context.fetch(Stat.fetchRequest()) as [Stat]
+            for delete in deleteStats {
+                context.delete(delete)
+            }
+        } catch {
+            print("tüdülü Error")
+        }
+        do {
+            let deleteGames = try context.fetch(Game.fetchRequest()) as [Game]
+            for delete2 in deleteGames {
+                context.delete(delete2)
+            }
+        } catch {
+            print("tüdülü Error")
+        }
+            
+   /*     let stats = Stat(context: context)
+        let games = Game(context: context)
+        let teams = Team1(context: context)
+        context.delete(stats)
+        context.delete(games)
+        context.delete(teams)
+ */
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+    }
+    
     @IBAction func tippOffButton(_ sender: AnyObject) {
         createTeams()
         self.performSegue(withIdentifier: "SettingsToGameSegue", sender: self)

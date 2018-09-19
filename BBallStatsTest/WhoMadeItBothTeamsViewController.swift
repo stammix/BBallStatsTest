@@ -415,17 +415,20 @@ class WhoMadeItBothTeamsViewController: UIViewController {
             }
     } 
     func saveStat() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let stat = Stat(context: context)
-        // stat.actionID = UUID(actionNumber)
-        stat.quarter = Int32(actualQuarter)
-        stat.minute = Int32(actualMinute)
-        stat.chosenTeam = Int32(chosenTeam)
-        stat.player = Int32(player)
-        stat.action = tappedAction
-        stat.chosenTeam = Int32(chosenTeam)
-        stat.points = Int32(pointsOfAction)
-        stat.actionID = Int32(actionNumber)
+//        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        let stat = Stat(context: context)
+//        // stat.actionID = UUID(actionNumber)
+//        stat.quarter = Int32(actualQuarter)
+//        stat.minute = Int32(actualMinute)
+//        stat.chosenTeam = Int32(chosenTeam)
+//        stat.player = Int32(player)
+//        stat.action = tappedAction
+//        stat.chosenTeam = Int32(chosenTeam)
+//        stat.points = Int32(pointsOfAction)
+//        stat.actionID = Int32(actionNumber)
+        createStat(actionID: 1, quarter: Int32(actualQuarter), minute: Int32(actualMinute), action: tappedAction, chosenTeam: Int32(chosenTeam), player: Int32(player), points: Int32(pointsOfAction))
+  /*      updateGame(quarter: Int32(actualQuarter), minute: Int32(actualMinute), scoreTeam1: <#T##Int32#>, scoreTeam2: <#T##Int32#>)
+ */
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
     }
     

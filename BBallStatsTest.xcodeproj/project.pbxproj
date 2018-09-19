@@ -223,15 +223,18 @@
 				TargetAttributes = {
 					86C620462062AFBB00F4CCCF = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					86C6205D2062AFBB00F4CCCF = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 86C620462062AFBB00F4CCCF;
 					};
 					86C620682062AFBB00F4CCCF = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 86C620462062AFBB00F4CCCF;
 					};
@@ -473,7 +476,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.BBallStats.BBallStatsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -490,7 +493,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.BBallStats.BBallStatsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -509,7 +512,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.BBallStats.BBallStatsTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBallStatsTest.app/BBallStatsTest";
 			};
@@ -529,7 +532,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.BBallStats.BBallStatsTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBallStatsTest.app/BBallStatsTest";
 			};
@@ -548,7 +551,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.BBallStats.BBallStatsTestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BBallStatsTest;
 			};
@@ -567,7 +570,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.BBallStats.BBallStatsTestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BBallStatsTest;
 			};
